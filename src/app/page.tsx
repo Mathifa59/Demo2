@@ -5,6 +5,7 @@ import { JoisCam } from "@/components/JoisCam";
 import { Benefits } from "@/components/Benefits";
 import { Crops } from "@/components/Crops";
 import { CTA } from "@/components/CTA";
+import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Benefits />
         <Crops />
         <CTA />
+        <ContactForm />
       </main>
       <Footer />
     </>

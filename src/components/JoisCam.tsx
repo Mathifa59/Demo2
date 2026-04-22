@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { CheckCircle2, Factory } from "lucide-react";
+import { CheckCircle2, Factory, Sparkles, ArrowRight } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const features = [
   "Clasificación automática por calidad",
@@ -10,59 +11,89 @@ const features = [
 
 export function JoisCam() {
   return (
-    <section id="jois-cam" className="bg-white py-20">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-        <div>
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-brand-950 sm:text-5xl">
-            Nuestro sistema{" "}
-            <span className="text-brand-600">Jois Cam</span>
-          </h2>
-          <p className="mt-5 max-w-lg text-neutral-700">
-            Combinamos cámaras de alta resolución con inteligencia artificial
-            para clasificar frutas y hortalizas en tiempo real, asegurando
-            calidad, consistencia y menor desperdicio.
-          </p>
+    <section
+      id="jois-cam"
+      className="relative overflow-hidden bg-gradient-to-b from-white to-brand-50/40 py-24"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-32 bottom-10 h-80 w-80 rounded-full bg-lime-brand/20 blur-3xl"
+      />
 
-          <ul className="mt-8 space-y-4">
-            {features.map((f) => (
-              <li key={f} className="flex items-start gap-3 text-neutral-800">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
-                <span className="text-sm">{f}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
+        <Reveal>
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100">
+              <Sparkles className="h-3 w-3" />
+              Nuestro producto
+            </span>
+            <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-5xl">
+              Conoce{" "}
+              <span className="text-gradient-brand">Jois Cam</span>
+            </h2>
+            <p className="mt-5 max-w-lg text-neutral-700">
+              Combinamos cámaras de alta resolución con inteligencia artificial
+              para clasificar frutas y hortalizas en tiempo real, asegurando
+              calidad, consistencia y menor desperdicio.
+            </p>
 
-          <Link
-            href="#contacto"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-brand-800 transition"
-          >
-            Conocer más sobre Jois Cam →
-          </Link>
-        </div>
+            <ul className="mt-8 space-y-3">
+              {features.map((f, i) => (
+                <Reveal key={f} delay={i * 80} as="li">
+                  <div className="group flex items-start gap-3 rounded-xl p-3 transition-all duration-300 hover:bg-white hover:shadow-sm">
+                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white">
+                      <CheckCircle2 className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm text-neutral-800">{f}</span>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
 
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
-            <img
-              src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1400&q=80"
-              alt="Línea de selección Jois Cam"
-              className="h-full w-full object-cover aspect-[4/3]"
-            />
+            <Link
+              href="#contacto"
+              className="btn-glow group mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              Conocer más sobre Jois Cam
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
-          <div className="absolute -right-4 bottom-10 w-60 rounded-xl bg-white p-5 shadow-xl ring-1 ring-black/5 sm:-right-6">
-            <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 text-brand-600 ring-1 ring-brand-100">
-              <Factory className="h-5 w-5" />
+        </Reveal>
+
+        <Reveal delay={150} variant="fade">
+          <div className="group relative">
+            <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-300/30 to-brand-700/20 blur-2xl opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/20 ring-1 ring-black/5">
+              <img
+                src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1400&q=80"
+                alt="Línea de selección Jois Cam"
+                className="h-full w-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-950/30 to-transparent" />
             </div>
-            <div className="text-center text-sm font-semibold text-brand-950">
-              Selección inteligente
-              <br />
-              en tiempo real
-            </div>
-            <div className="mt-3 rounded-lg bg-neutral-50 px-3 py-1.5 text-center text-[11px] font-medium text-brand-700">
-              <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-brand-500 align-middle" />
-              Sistema activo
+            <div className="absolute -right-4 bottom-10 w-64 rounded-2xl glass-card p-5 shadow-xl sm:-right-6 transition-transform duration-500 group-hover:-translate-y-1">
+              <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-md shadow-brand-500/30">
+                <Factory className="h-5 w-5" />
+              </div>
+              <div className="text-center text-sm font-bold text-accent-800">
+                Selección inteligente
+                <br />
+                en tiempo real
+              </div>
+              <div className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-brand-50 px-3 py-1.5 text-center text-[11px] font-semibold text-brand-700 ring-1 ring-brand-100">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-500 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
+                </span>
+                Sistema activo
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

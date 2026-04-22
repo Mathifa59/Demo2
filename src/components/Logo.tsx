@@ -1,31 +1,58 @@
-export function Logo({ tagline = true }: { tagline?: boolean }) {
+import Image from "next/image";
+
+type LogoProps = {
+  tagline?: boolean;
+  variant?: "default" | "light";
+  layout?: "horizontal" | "stacked";
+};
+
+export function Logo({
+  tagline = true,
+  variant = "default",
+  layout = "stacked",
+}: LogoProps) {
+  if (layout === "horizontal") {
+    return (
+      <div className="relative h-11 w-[170px] sm:h-12 sm:w-[190px]">
+        <Image
+          src="/sortiva-logo-horizontal.png"
+          alt="Sortiva — Selección Automatizada"
+          fill
+          sizes="190px"
+          className="object-contain object-left"
+          priority
+        />
+      </div>
+    );
+  }
+
+  const textColor =
+    variant === "light" ? "text-white" : "text-accent-700";
+  const taglineColor =
+    variant === "light" ? "text-white/70" : "text-brand-700/80";
   return (
     <div className="flex items-center gap-3">
-      <svg
-        viewBox="0 0 48 48"
-        className="h-11 w-11 shrink-0"
-        aria-hidden="true"
-      >
-        <circle cx="24" cy="24" r="23" fill="#fff" stroke="#246230" strokeWidth="2" />
-        <path
-          d="M10 30c6 2 12 1 17-4s6-11 4-17c-6-2-12-1-17 4s-6 11-4 17z"
-          fill="#3d874d"
+      <div className="relative h-12 w-12 shrink-0">
+        <Image
+          src="/sortiva-logo.png"
+          alt="Sortiva"
+          fill
+          sizes="48px"
+          className="object-contain"
+          priority
         />
-        <path
-          d="M10 30c4-8 10-13 18-15"
-          stroke="#1d4d28"
-          strokeWidth="1.5"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </svg>
+      </div>
       <div className="leading-tight">
-        <div className="font-extrabold tracking-tight text-brand-800 text-lg">
-          JOIS 0 WASTE
+        <div
+          className={`text-xl font-extrabold tracking-[0.14em] ${textColor}`}
+        >
+          SORTIVA
         </div>
         {tagline && (
-          <div className="text-[10px] text-brand-700/80 font-medium">
-            Más eficiencia. Menos desperdicio. Mayor rentabilidad.
+          <div
+            className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${taglineColor}`}
+          >
+            Selección Automatizada
           </div>
         )}
       </div>

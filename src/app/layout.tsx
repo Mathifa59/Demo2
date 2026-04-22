@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jois 0 Waste — Tecnología que cuida lo que la tierra produce",
+  title: "Sortiva — Selección automatizada para la agroindustria",
   description:
-    "En Jois 0 Waste desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",
+    "En Sortiva desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",
 };
 
 export default function RootLayout({

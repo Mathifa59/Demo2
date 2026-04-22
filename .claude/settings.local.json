@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pandoc --track-changes=all \"/c/Users/Usuario/Downloads/JOIS 0 WASTE \\(1\\).docx\" -o /tmp/jois.md)",
+      "Read(//tmp/**)",
+      "Bash(python \"C:/Users/Usuario/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/a98729f7-34e4-452c-9db4-faea4456f83d/2dc54746-f40a-4220-aed7-bcd790267244/skills/docx/scripts/office/unpack.py\" \"C:/Users/Usuario/Downloads/JOIS 0 WASTE \\(1\\).docx\" /tmp/jois-unpacked/)"
+    ]
+  }
+}
