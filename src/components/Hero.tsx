@@ -44,28 +44,37 @@ export function Hero() {
       <div className="mx-auto grid max-w-7xl gap-14 px-6 pt-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div className="max-w-2xl">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-100 backdrop-blur">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-70" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-300" />
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-100 backdrop-blur">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-70" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-300" />
+                </span>
+                Selección automatizada con IA
               </span>
-              Selección automatizada con IA
-            </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-lime-brand/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-brand-950 shadow">
+                ↑ Hasta +20% rentabilidad
+              </span>
+            </div>
           </Reveal>
 
           <Reveal delay={120}>
-            <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[68px]">
-              Tecnología que cuida
-              <br /> lo que la tierra{" "}
-              <span className="text-gradient-brand">produce</span>
+            <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[64px]">
+              Reduce mermas.
+              <br />
+              Aumenta tus{" "}
+              <span className="text-gradient-brand">ganancias.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={220}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              En Sortiva desarrollamos soluciones inteligentes que optimizan
-              la selección de frutas y hortalizas, reduciendo mermas y
-              aumentando la rentabilidad de tu empresa.
+              Automatizamos la selección de frutas y hortalizas con IA,
+              eliminando errores humanos y generando{" "}
+              <strong className="font-semibold text-white">
+                hasta un 20% más de rentabilidad
+              </strong>{" "}
+              para tu planta desde el primer mes.
             </p>
           </Reveal>
 

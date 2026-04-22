@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
 import { JoisCam } from "@/components/JoisCam";
+import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { Crops } from "@/components/Crops";
 import { CTA } from "@/components/CTA";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <JoisCam />
+        <HowItWorks />
         <Benefits />
         <Crops />
         <CTA />
