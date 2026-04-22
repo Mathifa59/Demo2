@@ -52,17 +52,17 @@ export function CTA() {
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="relative z-10 grid grid-cols-3 gap-4 self-center pb-10 text-center">
+          <div className="relative z-10 grid grid-cols-3 gap-2 self-center pb-10 text-center sm:gap-4">
             {features.map(({ icon: Icon, label }, i) => (
               <div
                 key={label}
                 className="group flex flex-col items-center"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-brand-600 ring-1 ring-brand-100 shadow-md transition-all duration-500 group-hover:-translate-y-1 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-brand-700 group-hover:text-white group-hover:shadow-brand-500/30">
-                  <Icon className="h-6 w-6" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-600 ring-1 ring-brand-100 shadow-md transition-all duration-500 group-hover:-translate-y-1 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-brand-700 group-hover:text-white group-hover:shadow-brand-500/30 sm:h-14 sm:w-14 sm:rounded-2xl">
+                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div className="mt-3 whitespace-pre-line text-xs font-semibold leading-snug text-neutral-800">
+                <div className="mt-2 whitespace-pre-line text-[10px] font-semibold leading-snug text-neutral-800 sm:mt-3 sm:text-xs">
                   {label}
                 </div>
               </div>

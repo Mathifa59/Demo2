@@ -42,7 +42,7 @@ export function Stats() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-4">
           {stats.map(({ icon: Icon, value, label }, i) => (
             <Reveal key={value} delay={i * 90}>
               <div className="group flex items-start gap-4 rounded-2xl p-4 transition-all duration-300 hover:bg-brand-50/50">

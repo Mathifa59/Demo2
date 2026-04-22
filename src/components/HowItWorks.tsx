@@ -58,15 +58,6 @@ export function HowItWorks() {
 
         {/* Steps */}
         <div className="relative grid gap-6 lg:grid-cols-3">
-          {/* línea conectora desktop */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute top-[3.25rem] left-[calc(16.66%+2rem)] right-[calc(16.66%+2rem)] hidden h-px lg:block"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(140,198,63,0.6) 0%, rgba(62,166,70,0.6) 50%, rgba(140,198,63,0.6) 100%)",
-            }}
-          />
 
           {steps.map(({ number, icon: Icon, title, desc, tag }, i) => (
             <Reveal key={number} delay={i * 110}>

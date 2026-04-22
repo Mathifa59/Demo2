@@ -89,13 +89,13 @@ export function ContactForm() {
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl bg-white p-8 shadow-xl ring-1 ring-black/5 sm:p-10">
+            <div className="relative overflow-hidden rounded-3xl bg-white p-5 shadow-xl ring-1 ring-black/5 sm:p-8 lg:p-10">
               <div
                 aria-hidden
                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-500 via-lime-brand to-brand-500"
               />
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     id="nombre"
                     label="Nombre completo"
@@ -112,7 +112,7 @@ export function ContactForm() {
                   />
                 </div>
 
-                <div className="grid gap-5 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     id="email"
                     type="email"

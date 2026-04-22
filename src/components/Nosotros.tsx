@@ -116,7 +116,7 @@ export function Nosotros() {
 
           {/* Derecha: imagen + stats */}
           <Reveal delay={120} variant="fade">
-            <div className="relative">
+            <div className="relative pb-6 lg:pb-8">
               <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-200/40 to-brand-500/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
                 <img
@@ -127,8 +127,8 @@ export function Nosotros() {
                 <div className="absolute inset-0 bg-gradient-to-t from-accent-900/60 via-transparent to-transparent" />
               </div>
 
-              {/* Stat badges flotantes */}
-              <div className="absolute -bottom-5 left-4 right-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+              {/* Stat badges — flotantes en desktop, estáticos en móvil */}
+              <div className="relative mt-3 grid grid-cols-2 gap-3 lg:absolute lg:-bottom-5 lg:left-4 lg:right-4 lg:mt-0 xl:grid-cols-4">
                 {milestones.map(({ value, label }, i) => (
                   <div
                     key={value}

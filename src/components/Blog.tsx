@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 const posts = [
   {
     category: "Innovación agro",
-    categoryColor: "bg-brand-50 text-brand-700 ring-brand-100",
+    categoryColor: "bg-white/95 text-brand-700 ring-brand-200",
     title: "¿Por qué la selección manual ya no es suficiente en la agroexportación?",
     excerpt:
       "La variabilidad humana en la clasificación de frutas genera pérdidas invisibles que se acumulan campaña tras campaña. Descubre cómo la IA está cambiando las reglas del juego.",
@@ -18,7 +18,7 @@ const posts = [
   },
   {
     category: "Sostenibilidad",
-    categoryColor: "bg-lime-brand/15 text-brand-800 ring-lime-brand/30",
+    categoryColor: "bg-white/95 text-brand-700 ring-brand-200",
     title: "Desperdicio alimentario en Perú: el costo oculto que nadie calcula",
     excerpt:
       "Millones de toneladas de frutas y hortalizas se pierden cada año por errores en la selección. La tecnología de visión artificial puede revertir esta tendencia.",
@@ -29,7 +29,7 @@ const posts = [
   },
   {
     category: "Tecnología",
-    categoryColor: "bg-accent-50 text-accent-700 ring-accent-100",
+    categoryColor: "bg-white/95 text-accent-700 ring-accent-200",
     title: "Jois Cam: cómo entrenamos la IA con más de 5 millones de imágenes",
     excerpt:
       "El sistema de clasificación de Jois Cam no surgió de la noche a la mañana. Detrás hay años de captura de datos reales en plantas de todo el Perú.",
@@ -131,7 +131,7 @@ export function Blog() {
 
         {/* Newsletter CTA */}
         <Reveal delay={120}>
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-3xl bg-gradient-to-br from-brand-50 to-cream-100 p-8 ring-1 ring-brand-100 sm:flex-row">
+          <div className="mt-12 flex flex-col justify-between gap-6 rounded-3xl bg-gradient-to-br from-brand-50 to-cream-100 p-6 ring-1 ring-brand-100 sm:flex-row sm:items-center sm:p-8">
             <div>
               <div className="text-sm font-bold text-accent-800">
                 Recibe contenido exclusivo
@@ -142,17 +142,17 @@ export function Blog() {
               </p>
             </div>
             <form
-              className="flex w-full max-w-sm gap-2"
+              className="flex w-full flex-col gap-2 sm:max-w-sm sm:flex-row"
               onSubmit={(e) => e.preventDefault()}
             >
               <input
                 type="email"
                 placeholder="tu@empresa.com"
-                className="flex-1 rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                className="w-full rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                className="w-full rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg sm:w-auto sm:shrink-0"
               >
                 Suscribir
               </button>
