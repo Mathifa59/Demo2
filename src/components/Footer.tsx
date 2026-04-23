@@ -50,12 +50,12 @@ export function Footer() {
             Enlaces rápidos
           </h4>
           <ul className="grid grid-cols-2 gap-y-2 text-sm text-neutral-300">
-            <li><Link href="#inicio" className="transition-colors hover:text-lime-brand">Inicio</Link></li>
-            <li><Link href="#beneficios" className="transition-colors hover:text-lime-brand">Beneficios</Link></li>
-            <li><Link href="#nosotros" className="transition-colors hover:text-lime-brand">Nosotros</Link></li>
-            <li><Link href="#blog" className="transition-colors hover:text-lime-brand">Blog</Link></li>
-            <li><Link href="#jois-cam" className="transition-colors hover:text-lime-brand">Jois Cam</Link></li>
-            <li><Link href="#contacto" className="transition-colors hover:text-lime-brand">Contacto</Link></li>
+            <li><Link href="/" className="transition-colors hover:text-lime-brand">Inicio</Link></li>
+            <li><Link href="/beneficios" className="transition-colors hover:text-lime-brand">Beneficios</Link></li>
+            <li><Link href="/nosotros" className="transition-colors hover:text-lime-brand">Nosotros</Link></li>
+            <li><Link href="/blog" className="transition-colors hover:text-lime-brand">Blog</Link></li>
+            <li><Link href="/jois-cam" className="transition-colors hover:text-lime-brand">Jois Cam</Link></li>
+            <li><Link href="/contacto" className="transition-colors hover:text-lime-brand">Contacto</Link></li>
           </ul>
         </div>
 

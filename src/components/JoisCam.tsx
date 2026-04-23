@@ -55,7 +55,7 @@ export function JoisCam() {
             </ul>
 
             <Link
-              href="#contacto"
+              href="/contacto"
               className="btn-glow group mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
               Conocer más sobre Jois Cam

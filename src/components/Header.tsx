@@ -6,13 +6,13 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const nav = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#jois-cam", label: "Jois Cam" },
-  { href: "#beneficios", label: "Beneficios" },
-  { href: "#casos", label: "Casos de éxito" },
-  { href: "#blog", label: "Blog" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/", label: "Inicio" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/jois-cam", label: "Jois Cam" },
+  { href: "/beneficios", label: "Beneficios" },
+  { href: "/casos-exito", label: "Casos de éxito" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contacto", label: "Contacto" },
 ];
 
 export function Header() {
@@ -47,7 +47,7 @@ export function Header() {
           ))}
         </nav>
         <Link
-          href="#contacto"
+          href="/contacto"
           className="btn-glow group inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-4 py-2 text-xs font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap sm:px-5 sm:py-2.5 sm:text-sm"
         >
           <Leaf className="h-4 w-4 transition-transform duration-500 group-hover:rotate-[-18deg]" />

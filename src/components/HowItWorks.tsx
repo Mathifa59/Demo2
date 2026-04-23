@@ -101,7 +101,7 @@ export function HowItWorks() {
               </p>
             </div>
             <Link
-              href="#contacto"
+              href="/contacto"
               className="btn-glow group inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-3.5 text-sm font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
               Ver demostración
