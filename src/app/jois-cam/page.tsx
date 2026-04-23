@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JoisCam } from "@/components/JoisCam";
+import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function JoisCamPage() {
   return (
     <>
       <JoisCam />
+      <HowItWorks />
       <CTA />
     </>
   );

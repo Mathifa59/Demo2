@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Benefits } from "@/components/Benefits";
-import { HowItWorks } from "@/components/HowItWorks";
 import { Crops } from "@/components/Crops";
 import { CTA } from "@/components/CTA";
 
@@ -14,7 +13,6 @@ export default function BeneficiosPage() {
   return (
     <>
       <Benefits />
-      <HowItWorks />
       <Crops />
       <CTA />
     </>

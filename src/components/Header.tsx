@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Leaf } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
@@ -17,6 +18,7 @@ const nav = [
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -36,15 +38,23 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo layout="horizontal" />
         <nav className="hidden lg:flex items-center gap-8 text-sm text-neutral-700">
-          {nav.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className="relative transition-colors hover:text-brand-700 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:rounded-full after:bg-brand-500 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {n.label}
-            </Link>
-          ))}
+          {nav.map((n) => {
+            const isActive = pathname === n.href;
+            return (
+              <Link
+                key={n.href}
+                href={n.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:rounded-full after:bg-brand-500 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "font-semibold text-brand-700 after:w-full"
+                    : "hover:text-brand-700 after:w-0 hover:after:w-full"
+                }`}
+              >
+                {n.label}
+              </Link>
+            );
+          })}
         </nav>
         <Link
           href="/contacto"
