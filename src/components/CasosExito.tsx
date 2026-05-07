@@ -1,61 +1,66 @@
-import { TrendingUp, Clock, Award } from "lucide-react";
+import { Scale, Sprout, Leaf } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-const casos = [
-  {
-    cultivo: "Arándano",
-    empresa: "Agroexportadora del Sur S.A.C.",
-    region: "Ica, Perú",
-    img: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80",
-    challenge:
-      "Alta variabilidad en la selección manual generaba devoluciones frecuentes de clientes internacionales por calidad inconsistente.",
-    results: [
-      { icon: TrendingUp, label: "Rentabilidad", value: "+18%", color: "text-brand-600" },
-      { icon: Award, label: "Mermas", value: "-35%", color: "text-brand-600" },
-      { icon: Clock, label: "Implementación", value: "36 h", color: "text-accent-600" },
-    ],
-    quote:
-      "Desde que instalamos Jois Cam, nuestros clientes en Europa no han vuelto a hacer ninguna devolución por calidad.",
-    author: "Gerente de Producción",
-  },
+type Status = "Validado" | "Validado recientemente";
+
+type Producto = {
+  cultivo: string;
+  status: Status;
+  img: string;
+  metrics: {
+    procesado: string;
+    mermas: string;
+    co2: string;
+  };
+};
+
+const productos: Producto[] = [
   {
     cultivo: "Palta Hass",
-    empresa: "Agrícola Valle Verde E.I.R.L.",
-    region: "La Libertad, Perú",
-    img: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=800&q=80",
-    challenge:
-      "Con tres líneas de procesamiento manuales, los errores de clasificación representaban pérdidas de hasta S/ 40,000 por campaña.",
-    results: [
-      { icon: TrendingUp, label: "Rentabilidad", value: "+22%", color: "text-brand-600" },
-      { icon: Award, label: "Errores", value: "-90%", color: "text-brand-600" },
-      { icon: Clock, label: "Implementación", value: "48 h", color: "text-accent-600" },
-    ],
-    quote:
-      "El ROI fue visible desde la primera semana. Recuperamos la inversión antes del mes.",
-    author: "Director General",
+    status: "Validado",
+    img: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=900&q=80",
+    metrics: {
+      procesado: "+150 toneladas",
+      mermas: "hasta 15%",
+      co2: "+30 tn CO₂e",
+    },
   },
   {
-    cultivo: "Uva de mesa",
-    empresa: "Exportaciones Viñas del Pacífico",
-    region: "Chincha, Perú",
-    img: "https://images.unsplash.com/photo-1596363505729-4190a9506133?auto=format&fit=crop&w=800&q=80",
-    challenge:
-      "La selección visual dependía de 12 operarios por turno con criterios subjetivos, imposibles de estandarizar entre turnos.",
-    results: [
-      { icon: TrendingUp, label: "Rentabilidad", value: "+20%", color: "text-brand-600" },
-      { icon: Award, label: "Consistencia", value: "100%", color: "text-brand-600" },
-      { icon: Clock, label: "Ahorro mensual", value: "-60%", color: "text-accent-600" },
-    ],
-    quote:
-      "Ahora los tres turnos producen exactamente con el mismo estándar. Es como tener el mejor seleccionador trabajando las 24 horas.",
-    author: "Jefe de Planta",
+    cultivo: "Frijol chino",
+    status: "Validado",
+    img: "https://images.unsplash.com/photo-1612207983404-09c7be3d99cb?auto=format&fit=crop&w=900&q=80",
+    metrics: {
+      procesado: "+80 toneladas",
+      mermas: "hasta 12%",
+      co2: "+20 tn CO₂e",
+    },
+  },
+  {
+    cultivo: "Frijol Castilla",
+    status: "Validado recientemente",
+    img: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=900&q=80",
+    metrics: {
+      procesado: "En medición",
+      mermas: "En medición",
+      co2: "En medición",
+    },
+  },
+  {
+    cultivo: "Pallar",
+    status: "Validado",
+    img: "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=900&q=80",
+    metrics: {
+      procesado: "En medición",
+      mermas: "En medición",
+      co2: "En medición",
+    },
   },
 ];
 
 export function CasosExito() {
   return (
     <section
-      id="casos"
+      id="productos"
       className="relative overflow-hidden bg-cream-100 py-24"
     >
       <div
@@ -67,82 +72,65 @@ export function CasosExito() {
         <Reveal>
           <div className="mb-14 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100">
-              Resultados reales
+              Productos
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-accent-800 sm:text-4xl lg:text-5xl">
-              Casos de{" "}
-              <span className="text-gradient-brand">éxito</span>
+              Cultivos donde ya{" "}
+              <span className="text-gradient-brand">generamos resultados</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-600">
-              Empresas agroexportadoras que ya transformaron su operación con
-              Jois Cam y obtuvieron resultados medibles desde la primera semana.
+              Hemos validado nuestra tecnología en distintos cultivos, logrando
+              mejoras medibles en eficiencia, reducción de mermas e impacto
+              ambiental.
             </p>
           </div>
         </Reveal>
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          {casos.map((caso, i) => (
-            <Reveal key={caso.empresa} delay={i * 100}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 card-lift">
-                {/* Imagen */}
-                <div className="relative h-48 overflow-hidden">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {productos.map((p, i) => (
+            <Reveal key={p.cultivo} delay={i * 100}>
+              <article className="card-lift group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
+                <div className="relative h-44 overflow-hidden">
                   <img
-                    src={caso.img}
-                    alt={caso.cultivo}
+                    src={p.img}
+                    alt={p.cultivo}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/70 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between">
-                    <div>
-                      <div className="text-lg font-extrabold text-white">
-                        {caso.cultivo}
-                      </div>
-                      <div className="text-[11px] text-white/75">
-                        {caso.region}
-                      </div>
+                  <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between gap-2">
+                    <div className="text-lg font-extrabold text-white">
+                      {p.cultivo}
                     </div>
-                    <span className="rounded-full bg-lime-brand/90 px-2.5 py-1 text-[10px] font-bold text-brand-950">
-                      Caso real
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold ${
+                        p.status === "Validado recientemente"
+                          ? "bg-white/95 text-brand-700 ring-1 ring-brand-200"
+                          : "bg-lime-brand/90 text-brand-950"
+                      }`}
+                    >
+                      {p.status}
                     </span>
                   </div>
                 </div>
 
-                {/* Contenido */}
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="mb-4 text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
-                    {caso.empresa}
-                  </div>
-
-                  <p className="text-xs leading-relaxed text-neutral-600">
-                    <span className="font-semibold text-accent-800">
-                      Desafío:
-                    </span>{" "}
-                    {caso.challenge}
-                  </p>
-
-                  {/* Resultados */}
-                  <div className="my-5 grid grid-cols-3 gap-2 rounded-2xl bg-neutral-50 p-4 ring-1 ring-neutral-100">
-                    {caso.results.map(({ icon: Icon, label, value, color }) => (
-                      <div key={label} className="text-center">
-                        <div className={`text-xl font-extrabold ${color}`}>
-                          {value}
-                        </div>
-                        <div className="mt-0.5 text-[10px] text-neutral-500">
-                          {label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <blockquote className="mt-auto rounded-xl bg-brand-50 p-4 ring-1 ring-brand-100">
-                    <p className="text-xs italic leading-relaxed text-brand-900">
-                      &ldquo;{caso.quote}&rdquo;
-                    </p>
-                    <footer className="mt-2 text-[10px] font-semibold text-brand-700">
-                      — {caso.author}
-                    </footer>
-                  </blockquote>
+                <div className="flex flex-1 flex-col p-5">
+                  <ul className="flex flex-1 flex-col gap-3">
+                    <MetricRow
+                      icon={Scale}
+                      label="Cantidad procesada"
+                      value={p.metrics.procesado}
+                    />
+                    <MetricRow
+                      icon={Sprout}
+                      label="Mermas reducidas"
+                      value={p.metrics.mermas}
+                    />
+                    <MetricRow
+                      icon={Leaf}
+                      label="CO₂ reducido"
+                      value={p.metrics.co2}
+                    />
+                  </ul>
                 </div>
               </article>
             </Reveal>
@@ -150,5 +138,36 @@ export function CasosExito() {
         </div>
       </div>
     </section>
+  );
+}
+
+function MetricRow({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  value: string;
+}) {
+  const isPending = value === "En medición";
+  return (
+    <li className="flex items-center gap-3 rounded-xl bg-neutral-50 p-3 ring-1 ring-neutral-100">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand-50 to-brand-100 text-brand-600 ring-1 ring-brand-100">
+        <Icon className="h-4 w-4" />
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="text-[10px] font-semibold uppercase tracking-wider text-neutral-500">
+          {label}
+        </div>
+        <div
+          className={`text-sm font-bold ${
+            isPending ? "text-neutral-400" : "text-accent-800"
+          }`}
+        >
+          {value}
+        </div>
+      </div>
+    </li>
   );
 }

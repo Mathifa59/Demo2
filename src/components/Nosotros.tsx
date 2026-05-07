@@ -5,30 +5,30 @@ const pillars = [
   {
     icon: Zap,
     title: "Innovación tecnológica",
-    desc: "Desarrollamos software de precisión gráfica con IA entrenada sobre millones de imágenes reales del campo.",
+    desc: "Desarrollamos software de precisión gráfica entrenado con millones de imágenes reales del campo, que mejora la consistencia y exactitud en la clasificación de fruta.",
   },
   {
     icon: Leaf,
     title: "Sostenibilidad",
-    desc: "Cada fruta bien seleccionada es toneladas de alimento que no se desperdician y menos impacto ambiental.",
+    desc: "Cada fruta bien clasificada reduce el desperdicio y evita que producto apto se convierta en merma, generando un impacto positivo en el uso de recursos y el medio ambiente.",
   },
   {
     icon: Globe2,
     title: "Visión global",
-    desc: "Ser líderes internacionales en soluciones tecnológicas para la agroexportación, desde Perú para el mundo.",
+    desc: "Expandir nuestra solución a los principales mercados agroexportadores, llevando procesos de selección más precisos y eficientes desde Perú hacia el mundo.",
   },
   {
     icon: Users,
     title: "Equipo especializado",
-    desc: "Nacimos en el sector. Conocemos los problemas de primera mano porque los vivimos dentro de las plantas.",
+    desc: "Somos un equipo con experiencia directa en agroexportación. Entendemos los desafíos de la operación porque trabajamos dentro de plantas reales.",
   },
 ];
 
 const milestones = [
-  { value: "+5M", label: "imágenes de entrenamiento" },
-  { value: "+10", label: "plantas implementadas" },
-  { value: "100%", label: "eficiencia en selección" },
-  { value: "$299", label: "desde, por línea al mes" },
+  { value: "+5M", label: "imágenes reales analizadas en operación" },
+  { value: "+35", label: "plantas que ya optimizan su selección" },
+  { value: "+20%", label: "mejora en rentabilidad" },
+  { value: "+13 TN", label: "producto recuperado que antes se consideraba merma" },
 ];
 
 export function Nosotros() {
@@ -50,16 +50,19 @@ export function Nosotros() {
               Nosotros
             </span>
             <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-5xl">
-              Nacimos en el campo.
+              Mejoramos la selección.
               <br />
-              <span className="text-gradient-brand">Crecimos con la IA.</span>
+              <span className="text-gradient-brand">
+                Mejoramos el resultado.
+              </span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-neutral-600">
-              Somos una empresa peruana de base tecnológica con experiencia
-              directa en el sector agroexportador. Identificamos el problema
-              más costoso de la industria —la alta dependencia del factor
-              humano en la selección de frutas— y lo resolvimos con
-              inteligencia artificial.
+              Somos una empresa peruana enfocada en optimizar la selección de
+              fruta en plantas agroexportadoras. Mejoramos la precisión en la
+              clasificación en línea, reduciendo mermas y recuperando valor
+              que se pierde por errores en el proceso. Nuestra solución ya
+              opera en plantas reales, donde contribuye a mejorar la
+              eficiencia operativa y la rentabilidad de cada campaña.
             </p>
           </div>
         </Reveal>
@@ -74,10 +77,9 @@ export function Nosotros() {
                     Nuestra misión
                   </div>
                   <p className="text-sm leading-relaxed text-white/90">
-                    Reducir las mermas en la agroindustria mediante tecnología
-                    de precisión que optimice la selección de productos,
-                    generando mayor rentabilidad y contribuyendo a la
-                    sostenibilidad ambiental.
+                    Optimizar los procesos de selección en la agroindustria,
+                    mejorando la precisión en la clasificación de frutas para
+                    reducir mermas y maximizar el valor de la producción.
                   </p>
                 </div>
                 <div className="rounded-2xl bg-accent-800 p-6 text-white shadow-lg">
@@ -121,7 +123,7 @@ export function Nosotros() {
               <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
                 <img
                   src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1400&q=80"
-                  alt="Equipo Sortiva en planta"
+                  alt="Equipo Selekta en planta"
                   className="aspect-[4/3] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-accent-900/60 via-transparent to-transparent" />

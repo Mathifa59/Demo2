@@ -9,9 +9,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sortiva — Selección automatizada para la agroindustria",
+  title: "Selekta — Selección automatizada para la agroindustria",
   description:
-    "En Sortiva desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",
+    "En Selekta desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",
+  icons: {
+    icon: "/assets/logoselekta.png",
+    apple: "/assets/SELEKTA_fondo_blanco.png",
+  },
+  openGraph: {
+    title: "Selekta — Selección automatizada para la agroindustria",
+    description:
+      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma y aumentando rentabilidad hasta en 20%.",
+    type: "website",
+    locale: "es_PE",
+    images: [
+      {
+        url: "/assets/SELEKTA_fondo_blanco.png",
+        width: 1080,
+        height: 1080,
+        alt: "Selekta — Selección Automatizada",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Selekta — Selección automatizada para la agroindustria",
+    description:
+      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano.",
+    images: ["/assets/SELEKTA_fondo_blanco.png"],
+  },
 };
 
 export default function RootLayout({

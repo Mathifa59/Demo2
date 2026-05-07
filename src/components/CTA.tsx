@@ -3,9 +3,9 @@ import { Headphones, Leaf, Handshake, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const features = [
-  { icon: Headphones, label: "Asesoría personalizada" },
-  { icon: Leaf, label: "Soluciones adaptadas\na tu cultivo" },
-  { icon: Handshake, label: "Acompañamiento en\ntodo el proceso" },
+  { icon: Headphones, label: "Diagnóstico de\ntu proceso actual" },
+  { icon: Leaf, label: "Configuración adaptada\na tu cultivo y operación" },
+  { icon: Handshake, label: "Implementación y\nsoporte en planta" },
 ];
 
 export function CTA() {
@@ -38,10 +38,11 @@ export function CTA() {
               <span className="text-brand-600">ganancias</span>?
             </h2>
             <p className="mt-5 max-w-md text-sm text-neutral-700">
-              Hablemos sobre cómo Jois Cam puede transformar tu operación.
+              Conoce cómo mejorar la precisión en tu línea de selección y
+              aumentar la rentabilidad desde el primer mes.
             </p>
             <Link
-              href="mailto:info@sortiva.com"
+              href="mailto:info@selekta.com"
               className="btn-glow group mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5"
             >
               Solicitar demo ahora

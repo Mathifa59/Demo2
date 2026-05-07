@@ -4,7 +4,14 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(pandoc --track-changes=all \"/c/Users/Usuario/Downloads/JOIS 0 WASTE \\(1\\).docx\" -o /tmp/jois.md)",
       "Read(//tmp/**)",
-      "Bash(python \"C:/Users/Usuario/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/a98729f7-34e4-452c-9db4-faea4456f83d/2dc54746-f40a-4220-aed7-bcd790267244/skills/docx/scripts/office/unpack.py\" \"C:/Users/Usuario/Downloads/JOIS 0 WASTE \\(1\\).docx\" /tmp/jois-unpacked/)"
+      "Bash(python \"C:/Users/Usuario/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/a98729f7-34e4-452c-9db4-faea4456f83d/2dc54746-f40a-4220-aed7-bcd790267244/skills/docx/scripts/office/unpack.py\" \"C:/Users/Usuario/Downloads/JOIS 0 WASTE \\(1\\).docx\" /tmp/jois-unpacked/)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__tabs_create_mcp",
+      "mcp__Claude_in_Chrome__list_connected_browsers",
+      "mcp__Claude_in_Chrome__select_browser",
+      "mcp__pdf-viewer__display_pdf",
+      "mcp__pdf-viewer__list_pdfs",
+      "mcp__Claude_in_Chrome__switch_browser"
     ]
   }
 }

@@ -1,28 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-50: #edf7ee;
-  --color-brand-100: #d3ecd6;
-  --color-brand-200: #a7d9ac;
-  --color-brand-300: #7cc682;
-  --color-brand-400: #56b65f;
-  --color-brand-500: #3ea646;
-  --color-brand-600: #2f8a37;
-  --color-brand-700: #246d2d;
-  --color-brand-800: #1b5023;
-  --color-brand-900: #123619;
-  --color-brand-950: #0a1f0e;
+  /* Verde lima — anclado en el color exacto del logo Selekta */
+  --color-brand-50: #f3fae9;
+  --color-brand-100: #e1f3c7;
+  --color-brand-200: #c2e890;
+  --color-brand-300: #a0d459;
+  --color-brand-400: #8fcb44;
+  --color-brand-500: #8cc63f;
+  --color-brand-600: #6daa2e;
+  --color-brand-700: #528326;
+  --color-brand-800: #3a5e1a;
+  --color-brand-900: #263f11;
+  --color-brand-950: #162708;
 
+  /* Azul corporativo — anclado en el azul del logo Selekta */
   --color-accent-50: #eef4fb;
-  --color-accent-100: #d6e4f2;
-  --color-accent-200: #a8c3e3;
-  --color-accent-300: #6f98ce;
-  --color-accent-400: #3f70b9;
-  --color-accent-500: #1f4f98;
-  --color-accent-600: #183f7a;
-  --color-accent-700: #12315f;
-  --color-accent-800: #0d2447;
-  --color-accent-900: #091832;
+  --color-accent-100: #d4e5f5;
+  --color-accent-200: #a5c4e8;
+  --color-accent-300: #6a9ad4;
+  --color-accent-400: #3c6db8;
+  --color-accent-500: #1b4f9a;
+  --color-accent-600: #163f7b;
+  --color-accent-700: #11305f;
+  --color-accent-800: #0c2347;
+  --color-accent-900: #081733;
 
   --color-lime-brand: #8cc63f;
 
@@ -66,9 +68,9 @@
 }
 
 @keyframes pulseRing {
-  0% { box-shadow: 0 0 0 0 rgba(62, 166, 70, 0.55); }
-  70% { box-shadow: 0 0 0 14px rgba(62, 166, 70, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(62, 166, 70, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(140, 198, 63, 0.55); }
+  70% { box-shadow: 0 0 0 14px rgba(140, 198, 63, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(140, 198, 63, 0); }
 }
 
 @keyframes shimmer {
@@ -114,7 +116,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a1f0e;
+  --foreground: #162708;
 }
 
 body {
@@ -173,7 +175,7 @@ html {
 }
 
 .glass-dark {
-  background: rgba(10, 31, 14, 0.55);
+  background: rgba(22, 39, 8, 0.55);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -186,7 +188,7 @@ html {
 
 .card-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 22px 45px -18px rgba(18, 54, 25, 0.28);
+  box-shadow: 0 22px 45px -18px rgba(38, 63, 17, 0.28);
 }
 
 .shimmer-bg {

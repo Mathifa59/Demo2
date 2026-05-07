@@ -46,12 +46,12 @@ export function Benefits() {
               Beneficios
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-accent-800 sm:text-4xl">
-              Beneficios que{" "}
-              <span className="text-brand-600">transforman</span> tu producción
+              Menos merma,{" "}
+              <span className="text-brand-600">más valor</span> en tu producción
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-600">
-              Una plataforma pensada para mejorar cada etapa del proceso, desde
-              el campo hasta el cliente final.
+              Mejoramos la precisión en la selección en planta para reducir
+              pérdidas y aumentar el valor de cada campaña.
             </p>
           </div>
         </Reveal>

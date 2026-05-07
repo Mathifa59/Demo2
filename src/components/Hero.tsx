@@ -50,31 +50,33 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-300 opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-300" />
                 </span>
-                Selección automatizada con IA
+                Selección automatizada
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-lime-brand/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.15em] text-brand-950 shadow">
                 ↑ Hasta +20% rentabilidad
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/90 backdrop-blur">
+                Validada en operaciones reales
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
             <h1 className="mt-6 text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[64px]">
-              Reduce mermas.
-              <br />
-              Aumenta tus{" "}
-              <span className="text-gradient-brand">ganancias.</span>
+              Convierte pérdidas en{" "}
+              <span className="text-gradient-brand">ganancias</span>{" "}
+              con selección inteligente.
             </h1>
           </Reveal>
 
           <Reveal delay={220}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              Automatizamos la selección de frutas y hortalizas con IA,
-              eliminando errores humanos y generando{" "}
+              Nuestra tecnología de visión artificial clasifica frutas con
+              precisión superior al humano, reduciendo merma y aumentando la{" "}
               <strong className="font-semibold text-white">
-                hasta un 20% más de rentabilidad
-              </strong>{" "}
-              para tu planta desde el primer mes.
+                rentabilidad hasta en 20%
+              </strong>
+              .
             </p>
           </Reveal>
 
@@ -107,7 +109,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
-                href="#sortiva-cam"
+                href="#jois-cam"
                 className="group inline-flex items-center gap-3 rounded-full bg-white/10 px-7 py-3.5 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all duration-300 hover:bg-white/20 hover:ring-white/40"
               >
                 Conoce cómo funciona

@@ -6,7 +6,7 @@ const features = [
   "Clasificación automática por calidad",
   "Adaptable a diferentes cultivos",
   "Implementación rápida y sencilla",
-  "Pago accesible: desde $299 por línea",
+  "Toneladas de productos recuperados que antes se consideraba merma",
 ];
 
 export function JoisCam() {

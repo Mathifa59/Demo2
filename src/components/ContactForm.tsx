@@ -4,7 +4,6 @@ import { useState, FormEvent } from "react";
 import {
   Mail,
   Phone,
-  MapPin,
   Send,
   User,
   Building2,
@@ -25,27 +24,6 @@ function WhatsappIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-
-const infoCards = [
-  {
-    icon: Phone,
-    label: "Teléfono",
-    value: "+51 987 654 321",
-    href: "tel:+51987654321",
-  },
-  {
-    icon: Mail,
-    label: "Correo",
-    value: "info@sortiva.com",
-    href: "mailto:info@sortiva.com",
-  },
-  {
-    icon: MapPin,
-    label: "Oficina",
-    value: "Calle Los Agricultores 123, Ica, Perú",
-    href: "#",
-  },
-];
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -81,7 +59,7 @@ export function ContactForm() {
               <span className="text-gradient-brand">operación</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-600">
-              Déjanos tus datos y un especialista de Sortiva se
+              Déjanos tus datos y un especialista de Selekta se
               comunicará contigo en menos de 24 horas.
             </p>
           </div>
@@ -211,26 +189,6 @@ export function ContactForm() {
 
           <Reveal delay={120}>
             <div className="space-y-4">
-              {infoCards.map(({ icon: Icon, label, value, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="group flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-50 to-brand-100 text-brand-600 ring-1 ring-brand-100 transition-all duration-500 group-hover:-rotate-6 group-hover:from-brand-500 group-hover:to-brand-700 group-hover:text-white group-hover:shadow-md group-hover:shadow-brand-500/30">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
-                      {label}
-                    </div>
-                    <div className="truncate text-sm font-semibold text-accent-800">
-                      {value}
-                    </div>
-                  </div>
-                </a>
-              ))}
-
               <a
                 href="https://wa.me/51987654321?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Jois%20Cam"
                 target="_blank"

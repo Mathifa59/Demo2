@@ -5,22 +5,23 @@ const stats = [
   {
     icon: Camera,
     value: "+5M",
-    label: "Imágenes utilizadas para\nentrenar nuestro sistema",
+    label: "Imágenes reales utilizadas\npara entrenar y validar el sistema",
   },
   {
     icon: Target,
-    value: "100%",
-    label: "Eficiencia en selección\nalcanzada",
+    value: "Alta precisión",
+    compact: true,
+    label: "Consistencia en la clasificación\nde calidad en línea de proceso",
   },
   {
     icon: TrendingUp,
-    value: "20%",
-    label: "Más rentabilidad\npara nuestros clientes",
+    value: "+20%",
+    label: "Incremento en rentabilidad\npara nuestros clientes",
   },
   {
     icon: Leaf,
-    value: "-Miles",
-    label: "De toneladas de alimento\nque evitamos que se pierdan",
+    value: "+13 tn",
+    label: "De producto recuperado\nque antes se consideraba merma",
   },
 ];
 
@@ -43,14 +44,18 @@ export function Stats() {
         </Reveal>
 
         <div className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-4">
-          {stats.map(({ icon: Icon, value, label }, i) => (
+          {stats.map(({ icon: Icon, value, label, compact }, i) => (
             <Reveal key={value} delay={i * 90}>
               <div className="group flex items-start gap-4 rounded-2xl p-4 transition-all duration-300 hover:bg-brand-50/50">
                 <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-50 to-brand-100 text-brand-600 ring-1 ring-brand-100 transition-all duration-300 group-hover:scale-110 group-hover:shadow-md group-hover:shadow-brand-500/20">
                   <Icon className="h-6 w-6 transition-transform duration-500 group-hover:-rotate-6" />
                 </div>
                 <div>
-                  <div className="bg-gradient-to-br from-brand-700 to-brand-500 bg-clip-text text-4xl font-extrabold text-transparent">
+                  <div
+                    className={`bg-gradient-to-br from-brand-700 to-brand-500 bg-clip-text font-extrabold text-transparent ${
+                      compact ? "text-2xl leading-tight" : "text-4xl"
+                    }`}
+                  >
                     {value}
                   </div>
                   <div className="mt-1 whitespace-pre-line text-xs leading-snug text-neutral-600">
