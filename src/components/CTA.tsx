@@ -3,15 +3,9 @@ import { Headphones, Leaf, Handshake, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const features = [
-<<<<<<< HEAD
   { icon: Headphones, label: "Diagnóstico de\ntu proceso actual" },
   { icon: Leaf, label: "Configuración adaptada\na tu cultivo y operación" },
   { icon: Handshake, label: "Implementación y\nsoporte en planta" },
-=======
-  { icon: Headphones, label: "Asesoría personalizada" },
-  { icon: Leaf, label: "Soluciones a tu cultivo" },
-  { icon: Handshake, label: "Acompañamiento completo" },
->>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
 ];
 
 export function CTA() {
@@ -34,41 +28,18 @@ export function CTA() {
 
       <div className="relative mx-auto max-w-4xl px-6 py-16 text-center sm:py-20">
         <Reveal>
-<<<<<<< HEAD
-          <div className="relative z-10">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100 backdrop-blur">
-              Hablemos
-            </span>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-4xl lg:text-5xl">
-              ¿Listo para reducir mermas
-              <br /> y aumentar tus{" "}
-              <span className="text-brand-600">ganancias</span>?
-            </h2>
-            <p className="mt-5 max-w-md text-sm text-neutral-700">
-              Conoce cómo mejorar la precisión en tu línea de selección y
-              aumentar la rentabilidad desde el primer mes.
-            </p>
-            <Link
-              href="mailto:info@selekta.com"
-              className="btn-glow group mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-            >
-              Solicitar demo ahora
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-            <div className="h-16 lg:h-20" />
-          </div>
-=======
           <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100 backdrop-blur">
             Hablemos
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-4xl">
-            ¿Listo para reducir mermas y aumentar tus{" "}
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-4xl lg:text-5xl">
+            ¿Listo para reducir mermas
+            <br /> y aumentar tus{" "}
             <span className="text-brand-600">ganancias</span>?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-700 sm:text-base">
-            Hablemos sobre cómo Jois Cam puede transformar tu operación.
+          <p className="mx-auto mt-5 max-w-xl text-sm text-neutral-700">
+            Conoce cómo mejorar la precisión en tu línea de selección y
+            aumentar la rentabilidad desde el primer mes.
           </p>
->>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
         </Reveal>
 
         <Reveal delay={120}>
@@ -78,7 +49,9 @@ export function CTA() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand-600 ring-1 ring-brand-100 shadow-sm">
                   <Icon className="h-4 w-4" />
                 </span>
-                <span className="font-medium">{label}</span>
+                <span className="whitespace-pre-line text-left font-medium leading-tight">
+                  {label}
+                </span>
               </li>
             ))}
           </ul>

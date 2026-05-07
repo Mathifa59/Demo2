@@ -3,7 +3,7 @@ import { Blog } from "@/components/Blog";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Blog — Sortiva",
+  title: "Blog — Selekta",
   description:
     "Artículos sobre innovación agroindustrial, reducción de mermas y tecnología aplicada al campo.",
 };

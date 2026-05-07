@@ -12,7 +12,7 @@ const steps = [
   {
     number: "02",
     icon: Cpu,
-    title: "Evalúa en tiempo real",
+    title: "IA analiza en tiempo real",
     desc: "Nuestro sistema, entrenado con más de 5 millones de imágenes, evalúa cada fruta u hortaliza al instante: color, tamaño, defectos y madurez.",
     tag: "+5M imágenes",
   },
@@ -83,34 +83,6 @@ export function HowItWorks() {
           ))}
         </div>
 
-<<<<<<< HEAD
-=======
-        {/* ROI callout */}
-        <Reveal delay={150}>
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-3xl bg-gradient-to-br from-brand-700/30 to-brand-500/20 p-8 ring-1 ring-brand-500/30 backdrop-blur sm:flex-row">
-            <div className="text-center sm:text-left">
-              <div className="text-sm font-semibold uppercase tracking-wider text-brand-300">
-                Resultado promedio de nuestros clientes
-              </div>
-              <div className="mt-1 text-3xl font-extrabold text-white">
-                ROI positivo desde la primera semana.
-              </div>
-              <p className="mt-2 text-sm text-white/60">
-                Desde{" "}
-                <strong className="text-white">$299 por línea</strong> — sin
-                costos ocultos, implementación incluida.
-              </p>
-            </div>
-            <Link
-              href="/contacto"
-              className="btn-glow group inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-3.5 text-sm font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-            >
-              Ver demostración
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </Reveal>
->>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
       </div>
     </section>
   );

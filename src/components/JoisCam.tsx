@@ -6,7 +6,7 @@ const features = [
   "Clasificación automática por calidad",
   "Adaptable a diferentes cultivos",
   "Implementación rápida y sencilla",
-  "Toneladas de productos recuperados que antes se consideraba merma",
+  "Toneladas de productos recuperados que antes se considerara merma",
 ];
 
 export function JoisCam() {

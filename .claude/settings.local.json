@@ -11,7 +11,9 @@
       "mcp__Claude_in_Chrome__select_browser",
       "mcp__pdf-viewer__display_pdf",
       "mcp__pdf-viewer__list_pdfs",
-      "mcp__Claude_in_Chrome__switch_browser"
+      "mcp__Claude_in_Chrome__switch_browser",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Usuario\\\\OneDrive\\\\Escritorio\\\\Demo2\\\\Demo2\\\\src\\\\app\\\\casos-exito\\\\page.tsx\" -Force)",
+      "Bash(Remove-Item -Path \"C:\\\\Users\\\\Usuario\\\\OneDrive\\\\Escritorio\\\\Demo2\\\\Demo2\\\\src\\\\app\\\\casos-exito\" -Force)"
     ]
   }
 }

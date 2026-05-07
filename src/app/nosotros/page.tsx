@@ -3,9 +3,9 @@ import { Nosotros } from "@/components/Nosotros";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Nosotros — Sortiva",
+  title: "Nosotros — Selekta",
   description:
-    "Conoce a Sortiva: innovación tecnológica y visión sostenible al servicio de la agroindustria.",
+    "Conoce a Selekta: innovación tecnológica y visión sostenible al servicio de la agroindustria.",
 };
 
 export default function NosotrosPage() {

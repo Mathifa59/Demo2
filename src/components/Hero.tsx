@@ -56,7 +56,7 @@ export function Hero() {
                 ↑ Hasta +20% rentabilidad
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/90 backdrop-blur">
-                Validada en operaciones reales
+                Tecnología validada en operaciones reales de exportación.
               </span>
             </div>
           </Reveal>
@@ -109,11 +109,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
-<<<<<<< HEAD
-                href="#jois-cam"
-=======
                 href="/jois-cam"
->>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
                 className="group inline-flex items-center gap-3 rounded-full bg-white/10 px-7 py-3.5 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all duration-300 hover:bg-white/20 hover:ring-white/40"
               >
                 Conoce cómo funciona

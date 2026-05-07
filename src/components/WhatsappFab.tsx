@@ -1,5 +1,5 @@
 const WHATSAPP_NUMBER = "51981916198";
-const WHATSAPP_MESSAGE = "Hola, me interesa saber más sobre Sortiva.";
+const WHATSAPP_MESSAGE = "Hola, me interesa saber más sobre Selekta.";
 
 function WhatsappIcon({ className }: { className?: string }) {
   return (

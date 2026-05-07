@@ -4,9 +4,9 @@ import { Crops } from "@/components/Crops";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Beneficios — Sortiva",
+  title: "Beneficios — Selekta",
   description:
-    "Descubre cómo Sortiva reduce mermas, aumenta eficiencia y se adapta a cada cultivo.",
+    "Descubre cómo Selekta reduce mermas, aumenta eficiencia y se adapta a cada cultivo.",
 };
 
 export default function BeneficiosPage() {

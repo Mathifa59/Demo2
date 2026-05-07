@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://selekta.com"),
   title: "Selekta — Selección automatizada para la agroindustria",
   description:
     "En Selekta desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",

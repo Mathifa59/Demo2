@@ -4,9 +4,9 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Jois Cam — Sortiva",
+  title: "Jois Cam — Selekta",
   description:
-    "Jois Cam: la cámara inteligente de Sortiva que automatiza la selección de frutas y hortalizas con IA.",
+    "Jois Cam: la cámara inteligente de Selekta que automatiza la selección de frutas y hortalizas con IA.",
 };
 
 export default function JoisCamPage() {
