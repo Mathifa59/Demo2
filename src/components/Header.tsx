@@ -1,11 +1,17 @@
 "use client";
 
 import Link from "next/link";
+<<<<<<< HEAD
 import { Leaf, Menu, X } from "lucide-react";
+=======
+import { usePathname } from "next/navigation";
+import { Leaf } from "lucide-react";
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
 const nav = [
+<<<<<<< HEAD
   { href: "#inicio", label: "Inicio" },
   { href: "#nosotros", label: "Nosotros" },
   { href: "#jois-cam", label: "Jois Cam" },
@@ -13,11 +19,24 @@ const nav = [
   { href: "#productos", label: "Productos" },
   { href: "#blog", label: "Blog" },
   { href: "#contacto", label: "Contacto" },
+=======
+  { href: "/", label: "Inicio" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/jois-cam", label: "Jois Cam" },
+  { href: "/beneficios", label: "Beneficios" },
+  { href: "/casos-exito", label: "Casos de éxito" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contacto", label: "Contacto" },
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
 ];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+<<<<<<< HEAD
   const [menuOpen, setMenuOpen] = useState(false);
+=======
+  const pathname = usePathname();
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -33,6 +52,7 @@ export function Header() {
   }, [menuOpen]);
 
   return (
+<<<<<<< HEAD
     <>
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
@@ -144,5 +164,44 @@ export function Header() {
         </div>
       </aside>
     </>
+=======
+    <header
+      className={`sticky top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_6px_30px_-16px_rgba(10,31,14,0.25)] border-b border-neutral-100"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Logo layout="horizontal" />
+        <nav className="hidden lg:flex items-center gap-8 text-sm text-neutral-700">
+          {nav.map((n) => {
+            const isActive = pathname === n.href;
+            return (
+              <Link
+                key={n.href}
+                href={n.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:rounded-full after:bg-brand-500 after:transition-all after:duration-300 ${
+                  isActive
+                    ? "font-semibold text-brand-700 after:w-full"
+                    : "hover:text-brand-700 after:w-0 hover:after:w-full"
+                }`}
+              >
+                {n.label}
+              </Link>
+            );
+          })}
+        </nav>
+        <Link
+          href="/contacto"
+          className="btn-glow group inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-4 py-2 text-xs font-semibold text-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap sm:px-5 sm:py-2.5 sm:text-sm"
+        >
+          <Leaf className="h-4 w-4 transition-transform duration-500 group-hover:rotate-[-18deg]" />
+          Solicitar demo
+        </Link>
+      </div>
+    </header>
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
   );
 }

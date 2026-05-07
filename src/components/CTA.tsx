@@ -3,9 +3,15 @@ import { Headphones, Leaf, Handshake, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const features = [
+<<<<<<< HEAD
   { icon: Headphones, label: "Diagnóstico de\ntu proceso actual" },
   { icon: Leaf, label: "Configuración adaptada\na tu cultivo y operación" },
   { icon: Handshake, label: "Implementación y\nsoporte en planta" },
+=======
+  { icon: Headphones, label: "Asesoría personalizada" },
+  { icon: Leaf, label: "Soluciones a tu cultivo" },
+  { icon: Handshake, label: "Acompañamiento completo" },
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
 ];
 
 export function CTA() {
@@ -19,15 +25,16 @@ export function CTA() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-brand-200/50 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-brand-200/50 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 bottom-0 h-96 w-96 rounded-full bg-lime-brand/20 blur-3xl"
+        className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-lime-brand/20 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 pt-20 pb-4 lg:grid-cols-[1.1fr_1fr_0.9fr] lg:pb-0">
+      <div className="relative mx-auto max-w-4xl px-6 py-16 text-center sm:py-20">
         <Reveal>
+<<<<<<< HEAD
           <div className="relative z-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100 backdrop-blur">
               Hablemos
@@ -50,42 +57,42 @@ export function CTA() {
             </Link>
             <div className="h-16 lg:h-20" />
           </div>
+=======
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100 backdrop-blur">
+            Hablemos
+          </span>
+          <h2 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-4xl">
+            ¿Listo para reducir mermas y aumentar tus{" "}
+            <span className="text-brand-600">ganancias</span>?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-700 sm:text-base">
+            Hablemos sobre cómo Jois Cam puede transformar tu operación.
+          </p>
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
         </Reveal>
 
-        <Reveal delay={150}>
-          <div className="relative z-10 grid grid-cols-3 gap-2 self-center pb-10 text-center sm:gap-4">
-            {features.map(({ icon: Icon, label }, i) => (
-              <div
-                key={label}
-                className="group flex flex-col items-center"
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-600 ring-1 ring-brand-100 shadow-md transition-all duration-500 group-hover:-translate-y-1 group-hover:bg-gradient-to-br group-hover:from-brand-500 group-hover:to-brand-700 group-hover:text-white group-hover:shadow-brand-500/30 sm:h-14 sm:w-14 sm:rounded-2xl">
-                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
-                </div>
-                <div className="mt-2 whitespace-pre-line text-[10px] font-semibold leading-snug text-neutral-800 sm:mt-3 sm:text-xs">
-                  {label}
-                </div>
-              </div>
+        <Reveal delay={120}>
+          <ul className="mx-auto mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-neutral-800">
+            {features.map(({ icon: Icon, label }) => (
+              <li key={label} className="inline-flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand-600 ring-1 ring-brand-100 shadow-sm">
+                  <Icon className="h-4 w-4" />
+                </span>
+                <span className="font-medium">{label}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </Reveal>
 
-        <div className="relative hidden h-[420px] self-end lg:block">
-          <Reveal variant="fade" delay={250} className="h-full">
-            <img
-              src="https://images.pexels.com/photos/5529604/pexels-photo-5529604.jpeg?auto=compress&cs=tinysrgb&w=900"
-              alt="Agricultores en campo"
-              className="absolute bottom-0 right-0 h-full w-full object-cover object-center drop-shadow-[0_15px_30px_rgba(0,0,0,0.25)]"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 65% 80% at 55% 50%, #000 45%, rgba(0,0,0,0.9) 62%, transparent 92%)",
-                maskImage:
-                  "radial-gradient(ellipse 65% 80% at 55% 50%, #000 45%, rgba(0,0,0,0.9) 62%, transparent 92%)",
-              }}
-            />
-          </Reveal>
-        </div>
+        <Reveal delay={220}>
+          <Link
+            href="/contacto"
+            className="btn-glow group mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Solicitar demo ahora
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

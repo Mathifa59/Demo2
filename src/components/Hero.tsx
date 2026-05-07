@@ -102,14 +102,18 @@ export function Hero() {
           <Reveal delay={420}>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="#contacto"
+                href="/contacto"
                 className="btn-glow group inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-900/30 transition-all duration-300 hover:-translate-y-0.5"
               >
                 Solicitar demo
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
+<<<<<<< HEAD
                 href="#jois-cam"
+=======
+                href="/jois-cam"
+>>>>>>> 071bde22201fc0b95b0b68ec1bdc7a97135a486a
                 className="group inline-flex items-center gap-3 rounded-full bg-white/10 px-7 py-3.5 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all duration-300 hover:bg-white/20 hover:ring-white/40"
               >
                 Conoce cómo funciona

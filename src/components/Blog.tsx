@@ -68,7 +68,7 @@ export function Blog() {
               </p>
             </div>
             <Link
-              href="#blog"
+              href="/blog"
               className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-50 px-5 py-2.5 text-sm font-semibold text-brand-700 ring-1 ring-brand-100 transition-all duration-300 hover:bg-brand-600 hover:text-white hover:ring-brand-600"
             >
               Ver todos
