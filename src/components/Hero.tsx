@@ -6,8 +6,10 @@ import {
   TrendingUp,
   DollarSign,
   Sprout,
+  Package,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { CountUp } from "./CountUp";
 
 const pillars = [
   { icon: Leaf, label: "Menos\ndesperdicio" },
@@ -144,6 +146,24 @@ export function Hero() {
                   </div>
                   <div className="text-[10px] text-neutral-600">
                     +20% rentabilidad
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="absolute -right-3 top-6 w-52 rounded-2xl glass-card p-4 shadow-xl">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-lime-brand/20 text-brand-700">
+                  <Package className="h-5 w-5" />
+                </div>
+                <div className="leading-tight">
+                  <div className="text-[10px] font-semibold uppercase tracking-wider text-brand-700">
+                    Toneladas aprovechadas
+                  </div>
+                  <div className="mt-0.5 text-lg font-extrabold text-brand-900 tabular-nums">
+                    <CountUp end={12540} duration={4500} />
+                    <span className="ml-1 text-xs font-semibold text-neutral-500">
+                      t
+                    </span>
                   </div>
                 </div>
               </div>

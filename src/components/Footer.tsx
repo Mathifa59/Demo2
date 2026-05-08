@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { MapPin, MessageSquare } from "lucide-react";
 import { Logo } from "./Logo";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -68,6 +68,17 @@ export function Footer() {
               </a>
             ))}
           </div>
+
+          <h4 className="mt-8 mb-3 text-sm font-semibold text-white">¿Tienes algo que decirnos?</h4>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfHtUV_CJDOCt--H1pEjrt7h1VjmUNNqzRQypH2zLeYZ1qE2Q/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full border border-lime-brand/40 bg-lime-brand/10 px-4 py-2 text-xs font-medium text-lime-brand transition-all duration-300 hover:bg-lime-brand hover:text-accent-900 hover:-translate-y-0.5"
+          >
+            <MessageSquare className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-rotate-6" />
+            Quejas y sugerencias
+          </a>
         </div>
 
         <div>

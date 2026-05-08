@@ -28,6 +28,10 @@ Los colores actuales se estimaron visualmente desde el logo (verde lima `#8CC63F
 El PDF del manual de marca (`public/assets/Manual de Marca - SELEKTA.pdf`) no fue legible.
 Confirmar con el cliente si la paleta actual es correcta.
 
+### 10. Cifra real de toneladas aprovechadas
+En el Hero hay una tarjeta animada con contador "Toneladas aprovechadas — 12,540 t".
+El número es **provisional**. Pedir al cliente la cifra real (acumulado o por año) para reemplazar el `end={12540}` en `src/components/Hero.tsx`.
+
 ---
 
 ## Tareas técnicas (se pueden hacer sin el cliente)
@@ -46,3 +50,10 @@ Rutas a incluir: `/`, `/nosotros`, `/jois-cam`, `/beneficios`, `/productos`, `/b
 
 ### 9. SEO — robots.txt
 Falta `src/app/robots.ts`. Necesario para indicar a los motores de búsqueda qué indexar.
+
+---
+
+## Hecho en esta sesión
+
+- ✅ Botón **"Quejas y sugerencias"** en el Footer (columna "Síguenos"), abre el Google Form en pestaña nueva.
+- ✅ Tarjeta animada **"Toneladas aprovechadas"** en el Hero (count-up con `IntersectionObserver`, easing cubic-out, duración 4.5 s). Componente reutilizable en `src/components/CountUp.tsx`.
