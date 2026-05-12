@@ -2,11 +2,8 @@ import Image from "next/image";
 import { Scale, Sprout, Leaf } from "lucide-react";
 import { Reveal } from "./Reveal";
 
-type Status = "Validado" | "Validado recientemente";
-
 type Producto = {
   cultivo: string;
-  status: Status;
   img: string;
   metrics: {
     procesado: string;
@@ -18,7 +15,6 @@ type Producto = {
 const productos: Producto[] = [
   {
     cultivo: "Palta Hass",
-    status: "Validado",
     img: "/assets/FOTO PALTA HASS BUENA CALIDAD.jpg",
     metrics: {
       procesado: "+150 toneladas",
@@ -28,7 +24,6 @@ const productos: Producto[] = [
   },
   {
     cultivo: "Frijol chino",
-    status: "Validado",
     img: "/assets/FOTO FRIJOL CHINO 002.jpg",
     metrics: {
       procesado: "+80 toneladas",
@@ -38,7 +33,6 @@ const productos: Producto[] = [
   },
   {
     cultivo: "Frijol Castilla",
-    status: "Validado",
     img: "/assets/FRIJOL CASTILLA 002.jpg",
     metrics: {
       procesado: "20 toneladas",
@@ -48,7 +42,6 @@ const productos: Producto[] = [
   },
   {
     cultivo: "Pallar Bebé",
-    status: "Validado",
     img: "/assets/FOTO PALLAR 002.jpg",
     metrics: {
       procesado: "20 toneladas",
@@ -62,7 +55,11 @@ export function CasosExito() {
   return (
     <section
       id="productos"
-      className="relative overflow-hidden bg-cream-100 py-24"
+      className="relative overflow-hidden bg-cover bg-center bg-fixed py-24"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(251,250,246,0.92), rgba(245,242,232,0.9)), url('/assets/CULTIVO DE PALTA.jpg')",
+      }}
     >
       <div
         aria-hidden
@@ -100,19 +97,10 @@ export function CasosExito() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/70 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between gap-2">
+                  <div className="absolute bottom-3 left-4 right-4">
                     <div className="text-lg font-extrabold text-white">
                       {p.cultivo}
                     </div>
-                    <span
-                      className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold ${
-                        p.status === "Validado recientemente"
-                          ? "bg-white/95 text-brand-700 ring-1 ring-brand-200"
-                          : "bg-lime-brand/90 text-brand-950"
-                      }`}
-                    >
-                      {p.status}
-                    </span>
                   </div>
                 </div>
 

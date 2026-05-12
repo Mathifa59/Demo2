@@ -33,7 +33,11 @@ export function Benefits() {
   return (
     <section
       id="beneficios"
-      className="relative overflow-hidden bg-cream-100 py-24"
+      className="relative overflow-hidden bg-cover bg-center bg-fixed py-24"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(251,250,246,0.92), rgba(245,242,232,0.9)), url('/assets/CULTIVO DE PALTA.jpg')",
+      }}
     >
       <div
         aria-hidden
@@ -59,7 +63,7 @@ export function Benefits() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {items.map(({ icon: Icon, title, desc }, i) => (
             <Reveal key={title} delay={i * 90}>
-              <div className="card-lift group relative flex h-full flex-col items-center overflow-hidden rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+              <div className="card-lift group relative flex h-full flex-col items-center overflow-hidden rounded-2xl bg-white/85 p-6 text-center shadow-sm ring-1 ring-black/5 backdrop-blur-sm">
                 <div
                   aria-hidden
                   className="absolute -inset-px bg-gradient-to-br from-brand-100/0 via-brand-100/0 to-brand-200/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"

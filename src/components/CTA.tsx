@@ -10,20 +10,10 @@ const features = [
 
 export function CTA() {
   return (
-    <section
-      className="relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(247,245,234,0.94), rgba(232,241,224,0.88)), url('/assets/CULTIVO DE PALTA.jpg')",
-      }}
-    >
+    <section className="relative overflow-hidden bg-gradient-to-b from-cream-100/90 via-brand-50/85 to-cream-50/95">
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-brand-200/50 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-lime-brand/20 blur-3xl"
+        className="pointer-events-none absolute inset-0 opacity-35 [background-image:radial-gradient(circle_at_1px_1px,rgba(62,166,70,0.12)_1px,transparent_0)] [background-size:28px_28px]"
       />
 
       <div className="relative mx-auto max-w-4xl px-6 py-16 text-center sm:py-20">

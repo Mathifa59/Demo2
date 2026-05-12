@@ -31,7 +31,7 @@ export function Crops() {
           "linear-gradient(rgba(10,31,14,0.6), rgba(10,31,14,0.6)), url('/assets/CULTIVO DE PALTA.jpg')",
       }}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <Reveal>
           <div className="mb-12 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white ring-1 ring-white/25 backdrop-blur">
@@ -45,7 +45,7 @@ export function Crops() {
         </Reveal>
       </div>
 
-      <div className="marquee-mask relative">
+      <div className="marquee-mask relative z-10">
         <ul className="marquee-track flex gap-6 px-6">
           {loop.map((c, i) => (
             <li
