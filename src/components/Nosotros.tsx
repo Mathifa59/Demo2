@@ -36,17 +36,16 @@ export function Nosotros() {
   return (
     <section
       id="nosotros"
-      className="relative overflow-hidden bg-white py-24"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-cream-50 to-brand-50/50 py-24"
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/4 rounded-full bg-brand-50 blur-3xl"
+        className="pointer-events-none absolute inset-0 opacity-35 [background-image:radial-gradient(circle_at_1px_1px,rgba(62,166,70,0.1)_1px,transparent_0)] [background-size:28px_28px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        {/* Encabezado */}
         <Reveal>
-          <div className="mb-16 max-w-2xl">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100">
               Nosotros
             </span>
@@ -57,7 +56,7 @@ export function Nosotros() {
                 Mejoramos el resultado.
               </span>
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-neutral-600">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-600">
               Somos una empresa peruana enfocada en optimizar la selección de
               fruta en plantas agroexportadoras. Mejoramos la precisión en la
               clasificación en línea, reduciendo mermas y recuperando valor
@@ -68,60 +67,22 @@ export function Nosotros() {
           </div>
         </Reveal>
 
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
-          {/* Izquierda: misión, visión y pilares */}
-          <div className="space-y-10">
-            <Reveal>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 p-6 text-white shadow-lg shadow-brand-900/20">
-                  <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                    Nuestra misión
-                  </div>
-                  <p className="text-sm leading-relaxed text-white/90">
-                    Optimizar los procesos de selección en la agroindustria,
-                    mejorando la precisión en la clasificación de frutas para
-                    reducir mermas y maximizar el valor de la producción.
-                  </p>
-                </div>
-                <div className="rounded-2xl bg-accent-800 p-6 text-white shadow-lg">
-                  <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em] text-accent-300">
-                    Nuestra visión
-                  </div>
-                  <p className="text-sm leading-relaxed text-white/90">
-                    Ser líderes internacionales en soluciones tecnológicas
-                    para la agroexportación, promoviendo una industria más
-                    eficiente, sostenible y sin desperdicios.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {pillars.map(({ icon: Icon, title, desc }, i) => (
-                <Reveal key={title} delay={i * 80}>
-                  <div className="group flex flex-col gap-3 rounded-2xl bg-neutral-50 p-5 ring-1 ring-neutral-100 transition-all duration-300 hover:bg-white hover:shadow-md card-lift">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-accent-800">
-                        {title}
-                      </div>
-                      <p className="mt-1 text-xs leading-relaxed text-neutral-600">
-                        {desc}
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          {/* Derecha: imagen + stats */}
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal delay={120} variant="fade">
-            <div className="relative pb-6 lg:pb-8">
-              <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-200/40 to-brand-500/20 blur-2xl" />
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-[32px] bg-gradient-to-br from-brand-200/35 to-brand-500/15 blur-2xl" />
+              <div className="relative pb-20 pt-20 sm:pb-16 sm:pt-16">
+                <div className="pointer-events-none absolute inset-x-4 top-0 z-10 grid grid-cols-2 gap-3 sm:inset-x-8">
+                  {milestones.slice(0, 2).map(({ value, label }) => (
+                    <MilestoneBadge key={value} value={value} label={label} />
+                  ))}
+                </div>
+                <div className="pointer-events-none absolute inset-x-4 bottom-0 z-10 grid grid-cols-2 gap-3 sm:inset-x-8">
+                  {milestones.slice(2).map(({ value, label }) => (
+                    <MilestoneBadge key={value} value={value} label={label} />
+                  ))}
+                </div>
+              <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
                 <Image
                   src="/assets/FRIJOL CHINO PASANDO POR FAJA 002.jpeg"
                   alt="Alimento pasando por faja de selección"
@@ -129,30 +90,98 @@ export function Nosotros() {
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-accent-900/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent-900/45 via-transparent to-transparent" />
               </div>
-
-              {/* Stat badges — flotantes en desktop, estáticos en móvil */}
-              <div className="relative mt-3 grid grid-cols-2 gap-3 lg:absolute lg:-bottom-5 lg:left-4 lg:right-4 lg:mt-0 xl:grid-cols-4">
-                {milestones.map(({ value, label }, i) => (
-                  <div
-                    key={value}
-                    className="glass-card rounded-xl px-3 py-3 text-center shadow-lg"
-                    style={{ animationDelay: `${i * 100}ms` }}
-                  >
-                    <div className="bg-gradient-to-br from-brand-700 to-brand-500 bg-clip-text text-xl font-extrabold text-transparent">
-                      {value}
-                    </div>
-                    <div className="mt-0.5 text-[10px] leading-tight text-neutral-600">
-                      {label}
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </Reveal>
+
+          <div className="space-y-6">
+            <Reveal delay={80}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <StatementCard
+                  tone="brand"
+                  label="Nuestra misión"
+                  text="Optimizar los procesos de selección en la agroindustria, mejorando la precisión en la clasificación de frutas para reducir mermas y maximizar el valor de la producción."
+                />
+                <StatementCard
+                  tone="accent"
+                  label="Nuestra visión"
+                  text="Ser líderes internacionales en soluciones tecnológicas para la agroexportación, promoviendo una industria más eficiente, sostenible y sin desperdicios."
+                />
+              </div>
+            </Reveal>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {pillars.map(({ icon: Icon, title, desc }, i) => (
+                <Reveal key={title} delay={i * 80 + 140}>
+                  <PillarCard icon={Icon} title={title} desc={desc} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
+  );
+}
+
+function StatementCard({
+  tone,
+  label,
+  text,
+}: {
+  tone: "brand" | "accent";
+  label: string;
+  text: string;
+}) {
+  const toneClass =
+    tone === "brand"
+      ? "from-brand-600 to-brand-800 text-brand-200"
+      : "from-accent-700 to-accent-900 text-accent-200";
+
+  return (
+    <div className={`rounded-2xl bg-gradient-to-br ${toneClass} p-6 text-white shadow-lg shadow-brand-900/15`}>
+      <div className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em]">
+        {label}
+      </div>
+      <p className="text-sm leading-relaxed text-white/90">{text}</p>
+    </div>
+  );
+}
+
+function PillarCard({
+  icon: Icon,
+  title,
+  desc,
+}: {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <div className="group flex h-full gap-4 rounded-2xl bg-white/85 p-5 shadow-sm ring-1 ring-neutral-100 backdrop-blur transition-all duration-300 hover:bg-white hover:shadow-md card-lift">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100 transition-all duration-500 group-hover:bg-brand-600 group-hover:text-white">
+        <Icon className="h-5 w-5" />
+      </div>
+      <div>
+        <div className="text-sm font-bold text-accent-800">{title}</div>
+        <p className="mt-1 text-xs leading-relaxed text-neutral-600">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
+function MilestoneBadge({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="rounded-2xl bg-white/90 px-3 py-3 text-center shadow-lg ring-1 ring-brand-100 backdrop-blur-md">
+      <div className="bg-gradient-to-br from-brand-700 to-brand-500 bg-clip-text text-2xl font-extrabold text-transparent">
+        {value}
+      </div>
+      <div className="mx-auto mt-1 max-w-[9rem] text-[10px] font-medium leading-tight text-neutral-600">
+        {label}
+      </div>
+    </div>
   );
 }
