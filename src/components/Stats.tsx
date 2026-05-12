@@ -27,8 +27,14 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="relative bg-white py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section
+      className="relative overflow-hidden bg-cover bg-center py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(251,250,246,0.92), rgba(245,242,232,0.9)), url('/assets/CULTIVO DE PALTA.jpg')",
+      }}
+    >
+      <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
           <div className="mb-14 flex flex-col items-center gap-3 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100">
