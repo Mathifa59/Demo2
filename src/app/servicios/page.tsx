@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JoisCam } from "@/components/JoisCam";
+import { Services } from "@/components/Services";
 import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ServiciosPage() {
   return (
     <>
-      <JoisCam />
+      <Services />
       <HowItWorks />
       <CTA />
     </>

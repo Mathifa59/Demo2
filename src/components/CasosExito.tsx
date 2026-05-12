@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Scale, Sprout, Leaf } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -91,10 +92,12 @@ export function CasosExito() {
             <Reveal key={p.cultivo} delay={i * 100}>
               <article className="card-lift group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5">
                 <div className="relative h-44 overflow-hidden">
-                  <img
+                  <Image
                     src={p.img}
                     alt={p.cultivo}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/70 to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between gap-2">

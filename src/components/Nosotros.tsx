@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Leaf, Zap, Globe2, Users } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -120,11 +121,13 @@ export function Nosotros() {
           <Reveal delay={120} variant="fade">
             <div className="relative pb-6 lg:pb-8">
               <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-200/40 to-brand-500/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
-                <img
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
+                <Image
                   src="/assets/FRIJOL CHINO PASANDO POR FAJA 002.jpeg"
                   alt="Alimento pasando por faja de selección"
-                  className="aspect-[4/3] w-full object-cover"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-accent-900/60 via-transparent to-transparent" />
               </div>

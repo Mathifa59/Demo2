@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -22,7 +23,7 @@ const posts = [
     title: "Desperdicio alimentario en Perú: el costo oculto que nadie calcula",
     excerpt:
       "Millones de toneladas de frutas y hortalizas se pierden cada año por errores en la selección. La tecnología de visión artificial puede revertir esta tendencia.",
-    img: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=800&q=80",
+    img: "/assets/FRIJOL CHINO PASANDO POR FAJA 002.jpeg",
     date: "28 marzo 2026",
     readTime: "4 min",
     href: "#blog",
@@ -33,7 +34,7 @@ const posts = [
     title: "Selekta: cómo entrenamos nuestro sistema con más de 5 millones de imágenes",
     excerpt:
       "El sistema de clasificación de Selekta no surgió de la noche a la mañana. Detrás hay años de captura de datos reales en plantas de todo el Perú.",
-    img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
+    img: "/assets/CAMARAS EN FAJA 003.jpg",
     date: "10 marzo 2026",
     readTime: "6 min",
     href: "#blog",
@@ -83,10 +84,12 @@ export function Blog() {
               <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 card-lift">
                 {/* Imagen */}
                 <div className="relative h-52 overflow-hidden">
-                  <img
+                  <Image
                     src={post.img}
                     alt={post.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/50 to-transparent" />
                   <span
@@ -128,37 +131,6 @@ export function Blog() {
             </Reveal>
           ))}
         </div>
-
-        {/* Newsletter CTA */}
-        <Reveal delay={120}>
-          <div className="mt-12 flex flex-col justify-between gap-6 rounded-3xl bg-gradient-to-br from-brand-50 to-cream-100 p-6 ring-1 ring-brand-100 sm:flex-row sm:items-center sm:p-8">
-            <div>
-              <div className="text-sm font-bold text-accent-800">
-                Recibe contenido exclusivo
-              </div>
-              <p className="mt-1 text-xs text-neutral-600">
-                Tendencias en agroexportación, casos de éxito y novedades de
-                Selekta directo en tu correo.
-              </p>
-            </div>
-            <form
-              className="flex w-full flex-col gap-2 sm:max-w-sm sm:flex-row"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="tu@empresa.com"
-                className="w-full rounded-full border border-neutral-200 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
-              />
-              <button
-                type="submit"
-                className="w-full rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg sm:w-auto sm:shrink-0"
-              >
-                Suscribir
-              </button>
-            </form>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

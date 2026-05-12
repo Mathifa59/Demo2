@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const crops = [
@@ -49,13 +50,15 @@ export function Crops() {
           {loop.map((c, i) => (
             <li
               key={`${c.name}-${i}`}
-              className="group relative w-[220px] shrink-0 overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-xl transition-all duration-500 hover:ring-lime-brand hover:shadow-[0_25px_50px_-15px_rgba(140,198,63,0.45)] hover:-translate-y-2 sm:w-[260px]"
+              className="group relative aspect-square w-[220px] shrink-0 overflow-hidden rounded-2xl ring-2 ring-white/20 shadow-xl transition-all duration-500 hover:ring-lime-brand hover:shadow-[0_25px_50px_-15px_rgba(140,198,63,0.45)] hover:-translate-y-2 sm:w-[260px]"
               aria-hidden={i >= crops.length ? true : undefined}
             >
-              <img
+              <Image
                 src={c.img}
                 alt={c.name}
-                className="aspect-square w-full object-cover transition duration-700 group-hover:scale-110"
+                fill
+                sizes="260px"
+                className="object-cover transition duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/75 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex justify-center pb-3">
