@@ -2,28 +2,20 @@ import { Reveal } from "./Reveal";
 
 const crops = [
   {
-    name: "Uva",
-    img: "https://images.unsplash.com/photo-1596363505729-4190a9506133?auto=format&fit=crop&w=600&q=80",
+    name: "Palta Hass",
+    img: "/assets/FOTO PALTA HASS BUENA CALIDAD.jpg",
   },
   {
-    name: "Arándano",
-    img: "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=600&q=80",
+    name: "Frijol Chino",
+    img: "/assets/FOTO FRIJOL CHINO 002.jpg",
   },
   {
-    name: "Palta",
-    img: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=600&q=80",
+    name: "Frijol Castilla",
+    img: "/assets/FRIJOL CASTILLA 002.jpg",
   },
   {
-    name: "Mango",
-    img: "https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    name: "Cítricos",
-    img: "https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    name: "Pimiento",
-    img: "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=600&q=80",
+    name: "Pallar Bebé",
+    img: "/assets/FOTO PALLAR 002.jpg",
   },
 ];
 
@@ -35,7 +27,7 @@ export function Crops() {
       className="relative overflow-hidden bg-cover bg-center bg-fixed py-24"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(10,31,14,0.6), rgba(10,31,14,0.6)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2000&q=80')",
+          "linear-gradient(rgba(10,31,14,0.6), rgba(10,31,14,0.6)), url('/assets/CULTIVO DE PALTA.jpg')",
       }}
     >
       <div className="mx-auto max-w-7xl px-6">

@@ -28,7 +28,7 @@ export function Hero() {
         className="absolute inset-0 -z-20 bg-cover bg-center scale-[1.02]"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=2200&q=80')",
+            "url('/assets/CULTIVO DE PALTA.jpg')",
         }}
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-950/85 via-brand-900/70 to-brand-800/35" />
@@ -111,7 +111,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/jois-cam"
+                href="/servicios"
                 className="group inline-flex items-center gap-3 rounded-full bg-white/10 px-7 py-3.5 text-sm font-semibold text-white ring-1 ring-white/25 backdrop-blur transition-all duration-300 hover:bg-white/20 hover:ring-white/40"
               >
                 Conoce cómo funciona
@@ -130,7 +130,7 @@ export function Hero() {
               className="absolute inset-0 overflow-hidden rounded-[32px] ring-1 ring-white/20 shadow-2xl shadow-brand-950/40"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80')",
+                  "url('/assets/CAMARAS EN FAJA 003.jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -175,7 +175,7 @@ export function Hero() {
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand-500" />
                 </span>
                 <span className="text-[11px] font-semibold text-brand-900">
-                  IA analizando
+                  Sistema analizando
                 </span>
               </div>
               <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-neutral-200/80">

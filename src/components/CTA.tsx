@@ -14,7 +14,7 @@ export function CTA() {
       className="relative overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(247,245,234,0.94), rgba(232,241,224,0.88)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=2000&q=80')",
+          "linear-gradient(rgba(247,245,234,0.94), rgba(232,241,224,0.88)), url('/assets/CULTIVO DE PALTA.jpg')",
       }}
     >
       <div

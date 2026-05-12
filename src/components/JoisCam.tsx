@@ -29,14 +29,14 @@ export function JoisCam() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700 ring-1 ring-brand-100">
               <Sparkles className="h-3 w-3" />
-              Nuestro producto
+              Servicios
             </span>
             <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-accent-800 sm:text-5xl">
-              Conoce{" "}
-              <span className="text-gradient-brand">Jois Cam</span>
+              Nuestros{" "}
+              <span className="text-gradient-brand">servicios</span>
             </h2>
             <p className="mt-5 max-w-lg text-neutral-700">
-              Combinamos cámaras de alta resolución con inteligencia artificial
+              Combinamos cámaras de alta resolución con nuestro sistema
               para clasificar frutas y hortalizas en tiempo real, asegurando
               calidad, consistencia y menor desperdicio.
             </p>
@@ -58,7 +58,7 @@ export function JoisCam() {
               href="/contacto"
               className="btn-glow group mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
-              Conocer más sobre Jois Cam
+              Conocer más sobre nuestros servicios
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
@@ -69,8 +69,8 @@ export function JoisCam() {
             <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-300/30 to-brand-700/20 blur-2xl opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
             <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/20 ring-1 ring-black/5">
               <img
-                src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1400&q=80"
-                alt="Línea de selección Jois Cam"
+                src="/assets/CAMARAS EN FAJA 003.jpg"
+                alt="Cámara Selekta en faja de selección"
                 className="h-full w-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/30 to-transparent" />

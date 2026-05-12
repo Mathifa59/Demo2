@@ -162,7 +162,7 @@ export function ContactForm() {
                   />
                   <span>
                     Acepto el tratamiento de mis datos personales para recibir
-                    información comercial sobre Jois Cam.
+                    información comercial sobre Selekta.
                   </span>
                 </label>
 

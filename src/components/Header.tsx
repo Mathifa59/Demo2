@@ -9,7 +9,7 @@ import { Logo } from "./Logo";
 const nav = [
   { href: "/", label: "Inicio" },
   { href: "/nosotros", label: "Nosotros" },
-  { href: "/jois-cam", label: "Jois Cam" },
+  { href: "/servicios", label: "Servicios" },
   { href: "/beneficios", label: "Beneficios" },
   { href: "/productos", label: "Productos" },
   { href: "/blog", label: "Blog" },

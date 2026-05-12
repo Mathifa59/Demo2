@@ -11,7 +11,7 @@ const posts = [
     title: "¿Por qué la selección manual ya no es suficiente en la agroexportación?",
     excerpt:
       "La variabilidad humana en la clasificación de frutas genera pérdidas invisibles que se acumulan campaña tras campaña. Descubre cómo la IA está cambiando las reglas del juego.",
-    img: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=80",
+    img: "/assets/FOTO SELECCION MANUAL.jpg",
     date: "12 abril 2026",
     readTime: "5 min",
     href: "#blog",
@@ -30,9 +30,9 @@ const posts = [
   {
     category: "Tecnología",
     categoryColor: "bg-white/95 text-accent-700 ring-accent-200",
-    title: "Jois Cam: cómo entrenamos la IA con más de 5 millones de imágenes",
+    title: "Selekta: cómo entrenamos nuestro sistema con más de 5 millones de imágenes",
     excerpt:
-      "El sistema de clasificación de Jois Cam no surgió de la noche a la mañana. Detrás hay años de captura de datos reales en plantas de todo el Perú.",
+      "El sistema de clasificación de Selekta no surgió de la noche a la mañana. Detrás hay años de captura de datos reales en plantas de todo el Perú.",
     img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
     date: "10 marzo 2026",
     readTime: "6 min",
@@ -138,7 +138,7 @@ export function Blog() {
               </div>
               <p className="mt-1 text-xs text-neutral-600">
                 Tendencias en agroexportación, casos de éxito y novedades de
-                Jois Cam directo en tu correo.
+                Selekta directo en tu correo.
               </p>
             </div>
             <form

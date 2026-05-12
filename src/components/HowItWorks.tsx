@@ -12,7 +12,7 @@ const steps = [
   {
     number: "02",
     icon: Cpu,
-    title: "IA analiza en tiempo real",
+    title: "Nuestro sistema analiza en tiempo real",
     desc: "Nuestro sistema, entrenado con más de 5 millones de imágenes, evalúa cada fruta u hortaliza al instante: color, tamaño, defectos y madurez.",
     tag: "+5M imágenes",
   },
@@ -42,11 +42,11 @@ export function HowItWorks() {
         <Reveal>
           <div className="mb-16 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/80 ring-1 ring-white/15">
-              Jois Cam en acción
+              Servicios en acción
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
               ¿Cómo funciona{" "}
-              <span className="text-gradient-brand">Jois Cam</span>?
+              <span className="text-gradient-brand">nuestro sistema</span>?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm text-white/65">
               Tres pasos para transformar tu línea de producción en una

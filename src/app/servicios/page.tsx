@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Servicios de Selekta para automatizar la selección de frutas y hortalizas con cámaras de alta resolución y nuestro sistema de clasificación.",
 };
 
-export default function JoisCamPage() {
+export default function ServiciosPage() {
   return (
     <>
       <JoisCam />

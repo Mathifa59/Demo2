@@ -18,7 +18,7 @@ const productos: Producto[] = [
   {
     cultivo: "Palta Hass",
     status: "Validado",
-    img: "https://images.unsplash.com/photo-1519162808019-7de1683fa2ad?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/FOTO PALTA HASS BUENA CALIDAD.jpg",
     metrics: {
       procesado: "+150 toneladas",
       mermas: "hasta 15%",
@@ -28,7 +28,7 @@ const productos: Producto[] = [
   {
     cultivo: "Frijol chino",
     status: "Validado",
-    img: "https://images.unsplash.com/photo-1612207983404-09c7be3d99cb?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/FOTO FRIJOL CHINO 002.jpg",
     metrics: {
       procesado: "+80 toneladas",
       mermas: "hasta 12%",
@@ -37,20 +37,20 @@ const productos: Producto[] = [
   },
   {
     cultivo: "Frijol Castilla",
-    status: "Validado recientemente",
-    img: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=900&q=80",
+    status: "Validado",
+    img: "/assets/FRIJOL CASTILLA 002.jpg",
     metrics: {
-      procesado: "En medición",
+      procesado: "20 toneladas",
       mermas: "En medición",
       co2: "En medición",
     },
   },
   {
-    cultivo: "Pallar",
+    cultivo: "Pallar Bebé",
     status: "Validado",
-    img: "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=900&q=80",
+    img: "/assets/FOTO PALLAR 002.jpg",
     metrics: {
-      procesado: "En medición",
+      procesado: "20 toneladas",
       mermas: "En medición",
       co2: "En medición",
     },
