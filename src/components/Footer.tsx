@@ -29,8 +29,8 @@ export function Footer() {
       />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <Logo variant="light" />
-          <p className="mt-4 max-w-xs text-xs leading-relaxed text-neutral-400">
+          <Logo layout="footer" />
+          <p className="mt-5 max-w-xs text-xs leading-relaxed text-neutral-300">
             Más eficiencia. Menos desperdicio.
             <br />
             Mayor rentabilidad.
