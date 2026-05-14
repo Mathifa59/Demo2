@@ -1,17 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
-import { readFileSync } from "fs";
-import { join } from "path";
-
-function getLogoBase64(): string {
-  try {
-    const filePath = join(process.cwd(), "public", "assets", "SELEKTA_fondo_blanco.png");
-    const data = readFileSync(filePath);
-    return `data:image/png;base64,${data.toString("base64")}`;
-  } catch {
-    return "";
-  }
-}
+const LOGO_URL = "https://www.selektafood.com/assets/SELEKTA_fondo_blanco.png";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -80,8 +69,6 @@ export async function POST(req: NextRequest) {
     if (!emailRegex.test(email)) {
       return Response.json({ ok: false, error: "Correo inválido." }, { status: 400 });
     }
-
-    const logoSrc = getLogoBase64();
 
     const html = `<!DOCTYPE html>
 <html lang="es">
@@ -160,7 +147,14 @@ export async function POST(req: NextRequest) {
   <tr><td class="em-header" style="background-color:#ffffff;padding:24px 36px 20px;border-left:1px solid #e8ede8;border-right:1px solid #e8ede8">
     <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
       <td valign="middle">
-        <img src="${logoSrc}" alt="SELEKTA" width="120" style="display:block;width:120px;height:auto;border:0;outline:0">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td bgcolor="#ffffff" style="background:#ffffff;padding:8px 12px;border-radius:10px;">
+              <img src="${LOGO_URL}" alt="Selekta Food" width="110"
+                   style="display:block;width:110px;height:auto;border:0;outline:none;text-decoration:none;">
+            </td>
+          </tr>
+        </table>
       </td>
       <td align="right" valign="middle">
         <span class="em-chip" style="display:inline-block;background-color:#f0faf1;color:#2a6e30;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px;border:1px solid #b8debb">FORMULARIO WEB</span>
