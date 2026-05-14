@@ -29,6 +29,7 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [cultivo, setCultivo] = useState("");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -41,7 +42,9 @@ export function ContactForm() {
       empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
-      cultivo: (form.elements.namedItem("cultivo") as HTMLSelectElement).value,
+      cultivo: (form.elements.namedItem("cultivo") as HTMLSelectElement).value === "Otro"
+        ? ((form.elements.namedItem("cultivo_otro") as HTMLInputElement)?.value || "Otro")
+        : (form.elements.namedItem("cultivo") as HTMLSelectElement).value,
       mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
     };
 
@@ -149,20 +152,28 @@ export function ContactForm() {
                   <select
                     id="cultivo"
                     name="cultivo"
-                    defaultValue=""
+                    value={cultivo}
+                    onChange={(e) => setCultivo(e.target.value)}
                     className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-800 outline-none transition-all duration-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
                   >
                     <option value="" disabled>
                       Selecciona una opción
                     </option>
-                    <option>Uva</option>
-                    <option>Arándano</option>
-                    <option>Palta</option>
-                    <option>Mango</option>
-                    <option>Cítricos</option>
-                    <option>Pimiento</option>
-                    <option>Otro</option>
+                    <option>Palta Hass</option>
+                    <option>Frijol Chino</option>
+                    <option>Frijol Castilla</option>
+                    <option>Pallar Bebé</option>
+                    <option value="Otro">Otro</option>
                   </select>
+                  {cultivo === "Otro" && (
+                    <input
+                      id="cultivo_otro"
+                      name="cultivo_otro"
+                      type="text"
+                      placeholder="¿Qué producto procesas?"
+                      className="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-800 outline-none transition-all duration-300 placeholder:text-neutral-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+                    />
+                  )}
                 </div>
 
                 <div>
