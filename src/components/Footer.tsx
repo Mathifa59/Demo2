@@ -55,12 +55,14 @@ export function Footer() {
           <h4 className="mb-4 text-sm font-semibold text-white">Síguenos</h4>
           <div className="flex gap-3">
             {[
-              { Icon: LinkedinIcon, label: "LinkedIn" },
-              { Icon: InstagramIcon, label: "Instagram" },
-            ].map(({ Icon, label }) => (
+              { Icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/showcase/selektafood/" },
+              { Icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/selekta.food/" },
+            ].map(({ Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 transition-all duration-300 hover:bg-lime-brand hover:text-accent-900 hover:-translate-y-0.5 hover:ring-lime-brand"
               >
