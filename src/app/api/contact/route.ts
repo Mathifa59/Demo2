@@ -5,10 +5,78 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const DESTINATARIOS = ["tkuriyama@joisfood.com", "jdelgado@joisfood.com"];
 
+// ── Rate limiting ──────────────────────────────────────────────
+const RATE_LIMIT_MAX = 3;       // máximo de envíos
+const RATE_LIMIT_WINDOW = 10 * 60 * 1000; // ventana de 10 minutos
+
+const ipStore = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipStore.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    ipStore.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX) return true;
+
+  entry.count++;
+  return false;
+}
+
+// ── Sanitización ───────────────────────────────────────────────
+function sanitize(value: unknown): string {
+  if (typeof value !== "string") return "";
+  return value
+    .trim()
+    .slice(0, 2000)
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
+// ── Handler ────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   try {
-    const { nombre, empresa, email, telefono, cultivo, mensaje } =
-      await req.json();
+    // IP del cliente
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+
+    // Rate limit
+    if (isRateLimited(ip)) {
+      return Response.json(
+        { ok: false, error: "Demasiados intentos. Intenta en unos minutos." },
+        { status: 429 }
+      );
+    }
+
+    const body = await req.json();
+
+    // Honeypot — si viene relleno es un bot
+    if (body.website) {
+      return Response.json({ ok: true }); // respuesta falsa para no alertar al bot
+    }
+
+    // Sanitizar todos los campos
+    const nombre  = sanitize(body.nombre);
+    const empresa = sanitize(body.empresa);
+    const email   = sanitize(body.email);
+    const telefono = sanitize(body.telefono);
+    const cultivo  = sanitize(body.cultivo);
+    const mensaje  = sanitize(body.mensaje);
+
+    // Validaciones mínimas
+    if (!nombre || !empresa || !email || !mensaje) {
+      return Response.json({ ok: false, error: "Faltan campos obligatorios." }, { status: 400 });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return Response.json({ ok: false, error: "Correo inválido." }, { status: 400 });
+    }
 
     const { error } = await resend.emails.send({
       from: "Selekta Web <contacto@selektafood.com>",
@@ -46,8 +114,6 @@ export async function POST(req: NextRequest) {
           <!-- BODY -->
           <tr>
             <td style="background:#ffffff;padding:36px 40px">
-
-              <!-- DATOS -->
               <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #ebebeb;border-radius:12px;overflow:hidden">
                 <tr style="background:#f9f9f7">
                   <td style="padding:12px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#999;width:130px">Nombre</td>
@@ -71,19 +137,16 @@ export async function POST(req: NextRequest) {
                 </tr>
               </table>
 
-              <!-- MENSAJE -->
               <div style="margin-top:24px">
                 <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#999;margin:0 0 10px">Mensaje</p>
                 <div style="border-left:3px solid #2d7a33;background:#f9fdf9;border-radius:0 10px 10px 0;padding:16px 20px;font-size:14px;line-height:1.7;color:#333;white-space:pre-wrap">${mensaje}</div>
               </div>
 
-              <!-- CTA -->
               <div style="margin-top:28px;text-align:center">
                 <a href="mailto:${email}" style="display:inline-block;background:linear-gradient(135deg,#1e5c23,#2d7a33);color:#fff;font-size:13px;font-weight:600;text-decoration:none;padding:12px 28px;border-radius:50px">
                   Responder a ${nombre}
                 </a>
               </div>
-
             </td>
           </tr>
 
@@ -108,7 +171,7 @@ export async function POST(req: NextRequest) {
     }
 
     return Response.json({ ok: true });
-  } catch (err) {
+  } catch {
     return Response.json({ ok: false, error: "Error interno" }, { status: 500 });
   }
 }

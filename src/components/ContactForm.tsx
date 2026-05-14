@@ -25,14 +25,20 @@ function WhatsappIcon({ className }: { className?: string }) {
   );
 }
 
+const COOLDOWN_MS = 5 * 60 * 1000; // 5 minutos
+
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [cultivo, setCultivo] = useState("");
+  const [cooldownUntil, setCooldownUntil] = useState<number | null>(null);
+
+  const isOnCooldown = cooldownUntil !== null && Date.now() < cooldownUntil;
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (isOnCooldown) return;
     setLoading(true);
     setError(false);
 
@@ -46,6 +52,7 @@ export function ContactForm() {
         ? ((form.elements.namedItem("cultivo_otro") as HTMLInputElement)?.value || "Otro")
         : (form.elements.namedItem("cultivo") as HTMLSelectElement).value,
       mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
+      website: (form.elements.namedItem("website") as HTMLInputElement).value, // honeypot
     };
 
     try {
@@ -57,6 +64,7 @@ export function ContactForm() {
       const json = await res.json();
       if (json.ok) {
         setSubmitted(true);
+        setCooldownUntil(Date.now() + COOLDOWN_MS);
         form.reset();
       } else {
         setError(true);
@@ -107,6 +115,16 @@ export function ContactForm() {
                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-500 via-lime-brand to-brand-500"
               />
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot — invisible para humanos, los bots lo rellenan */}
+                <input
+                  type="text"
+                  name="website"
+                  defaultValue=""
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ display: "none" }}
+                />
                 <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
                     id="nombre"
@@ -216,13 +234,18 @@ export function ContactForm() {
 
                 <button
                   type="submit"
-                  disabled={loading || submitted}
+                  disabled={loading || submitted || isOnCooldown}
                   className="btn-glow group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-90"
                 >
                   {submitted ? (
                     <>
                       <CheckCircle2 className="h-4 w-4" />
                       Mensaje enviado, te contactaremos pronto
+                    </>
+                  ) : isOnCooldown ? (
+                    <>
+                      <CheckCircle2 className="h-4 w-4" />
+                      Ya enviaste un mensaje recientemente
                     </>
                   ) : loading ? (
                     <>
