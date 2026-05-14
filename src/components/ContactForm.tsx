@@ -27,11 +27,42 @@ function WhatsappIcon({ className }: { className?: string }) {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+    setLoading(true);
+    setError(false);
+
+    const form = e.currentTarget;
+    const data = {
+      nombre: (form.elements.namedItem("nombre") as HTMLInputElement).value,
+      empresa: (form.elements.namedItem("empresa") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
+      cultivo: (form.elements.namedItem("cultivo") as HTMLSelectElement).value,
+      mensaje: (form.elements.namedItem("mensaje") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (json.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -166,15 +197,29 @@ export function ContactForm() {
                   </span>
                 </label>
 
+                {error && (
+                  <p className="rounded-xl bg-red-50 px-4 py-3 text-center text-xs font-medium text-red-600 ring-1 ring-red-100">
+                    Ocurrió un error al enviar. Intenta nuevamente o escríbenos por WhatsApp.
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  disabled={submitted}
+                  disabled={loading || submitted}
                   className="btn-glow group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-600 to-brand-800 px-7 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-90"
                 >
                   {submitted ? (
                     <>
                       <CheckCircle2 className="h-4 w-4" />
                       Mensaje enviado, te contactaremos pronto
+                    </>
+                  ) : loading ? (
+                    <>
+                      <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                      </svg>
+                      Enviando...
                     </>
                   ) : (
                     <>
