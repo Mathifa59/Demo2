@@ -14,7 +14,16 @@
       "mcp__Claude_in_Chrome__switch_browser",
       "Bash(Remove-Item -Path \"C:\\\\Users\\\\Usuario\\\\OneDrive\\\\Escritorio\\\\Demo2\\\\Demo2\\\\src\\\\app\\\\casos-exito\\\\page.tsx\" -Force)",
       "Bash(Remove-Item -Path \"C:\\\\Users\\\\Usuario\\\\OneDrive\\\\Escritorio\\\\Demo2\\\\Demo2\\\\src\\\\app\\\\casos-exito\" -Force)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(pip show *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(python3 -c \"import cairo; print\\('cairo OK'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(py -c \"from PIL import Image; print\\('PIL OK'\\)\")",
+      "Bash(python -c \"from PIL import ImageFont; f = ImageFont.load_default\\(\\); print\\('default font OK'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(mkdir -p /tmp/fonts)",
+      "Bash(cp \"C:\\\\Users\\\\MathiasVasquez\\\\AppData\\\\Local\\\\Temp\\\\email_mockup.png\" \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\public\\\\assets\\\\email_mockup.png\")"
     ]
   }
 }
