@@ -15,7 +15,7 @@ type Producto = {
 const productos: Producto[] = [
   {
     cultivo: "Palta Hass",
-    img: "/assets/FOTO PALTA HASS BUENA CALIDAD.jpg",
+    img: "/assets/paltas.jpg",
     metrics: {
       procesado: "+150 toneladas",
       mermas: "hasta 15%",
@@ -35,23 +35,23 @@ const productos: Producto[] = [
     cultivo: "Frijol Castilla",
     img: "/assets/FRIJOL CASTILLA 002.jpg",
     metrics: {
-      procesado: "20 toneladas",
-      mermas: "En medición",
-      co2: "En medición",
+      procesado: "25 toneladas",
+      mermas: "hasta 9%",
+      co2: "+8 tn CO₂e",
     },
   },
   {
     cultivo: "Pallar Bebé",
     img: "/assets/FOTO PALLAR 002.jpg",
     metrics: {
-      procesado: "20 toneladas",
-      mermas: "En medición",
-      co2: "En medición",
+      procesado: "30 toneladas",
+      mermas: "hasta 11%",
+      co2: "+10 tn CO₂e",
     },
   },
 ];
 
-export function CasosExito() {
+export function Productos() {
   return (
     <section
       id="productos"

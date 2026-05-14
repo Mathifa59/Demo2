@@ -1,10 +1,10 @@
-import { CasosExito } from "@/components/CasosExito";
+import { Productos } from "@/components/Productos";
 import { CTA } from "@/components/CTA";
 
 export default function ProductosPage() {
   return (
     <>
-      <CasosExito />
+      <Productos />
       <CTA />
     </>
   );

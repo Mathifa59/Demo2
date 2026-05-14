@@ -70,7 +70,7 @@ export function Services() {
             <div className="absolute -inset-4 rounded-[36px] bg-gradient-to-br from-brand-300/30 to-brand-700/20 blur-2xl opacity-60 transition-opacity duration-500 group-hover:opacity-90" />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/20 ring-1 ring-black/5">
               <Image
-                src="/assets/CAMARAS EN FAJA 003.jpg"
+                src="/assets/CAMARAS EN FAJA 002.jpeg"
                 alt="Cámara Selekta en faja de selección"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

@@ -84,8 +84,8 @@ export function Nosotros() {
                 </div>
               <div className="relative aspect-[5/4] overflow-hidden rounded-3xl shadow-2xl shadow-brand-900/15 ring-1 ring-black/5">
                 <Image
-                  src="/assets/FRIJOL CHINO PASANDO POR FAJA 002.jpeg"
-                  alt="Alimento pasando por faja de selección"
+                  src="/assets/IMAGEN PARA SECCION NOSOTROS.jpeg"
+                  alt="Equipo Selekta en planta agroexportadora"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"

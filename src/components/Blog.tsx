@@ -23,7 +23,7 @@ const posts = [
     title: "Desperdicio alimentario en Perú: el costo oculto que nadie calcula",
     excerpt:
       "Millones de toneladas de frutas y hortalizas se pierden cada año por errores en la selección. La tecnología de visión artificial puede revertir esta tendencia.",
-    img: "/assets/FRIJOL CHINO PASANDO POR FAJA 002.jpeg",
+    img: "/assets/CAMARAS EN FAJA 003.jpg",
     date: "28 marzo 2026",
     readTime: "4 min",
     href: "#blog",

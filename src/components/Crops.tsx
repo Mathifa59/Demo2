@@ -5,18 +5,22 @@ const crops = [
   {
     name: "Palta Hass",
     img: "/assets/FOTO PALTA HASS BUENA CALIDAD.jpg",
+    pos: "center center",
   },
   {
     name: "Frijol Chino",
-    img: "/assets/FOTO FRIJOL CHINO 002.jpg",
+    img: "/assets/FOTO FRIJOL CHINO.jpg",
+    pos: "center 40%",
   },
   {
     name: "Frijol Castilla",
-    img: "/assets/FRIJOL CASTILLA 002.jpg",
+    img: "/assets/FOTO FRIJOL CASTILLA.jpg",
+    pos: "center 30%",
   },
   {
     name: "Pallar Bebé",
-    img: "/assets/FOTO PALLAR 002.jpg",
+    img: "/assets/FOTO PALLAR.jpg",
+    pos: "center 40%",
   },
 ];
 
@@ -59,6 +63,7 @@ export function Crops() {
                 fill
                 sizes="260px"
                 className="object-cover transition duration-700 group-hover:scale-110"
+                style={{ objectPosition: c.pos }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950/75 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex justify-center pb-3">
