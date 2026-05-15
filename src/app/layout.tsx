@@ -66,6 +66,9 @@ export const metadata: Metadata = {
       "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma hasta en 20%.",
     images: ["/assets/SELEKTA_fondo_blanco.png"],
   },
+  verification: {
+    google: "xQAhWW4PCL3oz7zIGSYw58O2Dmhux9ZTYnsMH1-OGWA",
+  },
 };
 
 export default function RootLayout({
