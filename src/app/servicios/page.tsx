@@ -4,9 +4,15 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Servicios — Selekta",
+  title: "Servicios",
   description:
-    "Servicios de Selekta para automatizar la selección de frutas y hortalizas con cámaras de alta resolución y nuestro sistema de clasificación.",
+    "Automatizamos la clasificación de frutas y hortalizas en tiempo real con cámaras de alta resolución. Implementación rápida, adaptable a cualquier cultivo.",
+  openGraph: {
+    title: "Servicios | Selekta",
+    description:
+      "Automatizamos la clasificación de frutas y hortalizas en tiempo real con cámaras de alta resolución. Implementación rápida, adaptable a cualquier cultivo.",
+    url: "https://www.selektafood.com/servicios",
+  },
 };
 
 export default function ServiciosPage() {

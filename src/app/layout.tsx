@@ -12,34 +12,58 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://selekta.com"),
-  title: "Selekta — Selección automatizada para la agroindustria",
+  metadataBase: new URL("https://www.selektafood.com"),
+  title: {
+    default: "Selekta — Selección inteligente para la agroindustria peruana",
+    template: "%s | Selekta",
+  },
   description:
-    "En Selekta desarrollamos soluciones inteligentes que optimizan la selección de frutas y hortalizas, reduciendo mermas y aumentando la rentabilidad de tu empresa.",
+    "Selekta automatiza la clasificación de frutas y hortalizas con visión artificial. Reduce mermas, mejora calidad y aumenta la rentabilidad de tu planta hasta en 20%.",
+  keywords: [
+    "selección de frutas",
+    "clasificación automática",
+    "visión artificial agroindustria",
+    "reducción de mermas",
+    "selección de paltas",
+    "selección de frijoles",
+    "tecnología agroindustrial Perú",
+    "selekta",
+    "selektafood",
+    "agroexportación Perú",
+  ],
+  authors: [{ name: "Selekta", url: "https://www.selektafood.com" }],
+  creator: "Selekta",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   icons: {
     icon: "/assets/logoselekta.png",
     apple: "/assets/SELEKTA_fondo_blanco.png",
   },
   openGraph: {
-    title: "Selekta — Selección automatizada para la agroindustria",
+    title: "Selekta — Selección inteligente para la agroindustria peruana",
     description:
       "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma y aumentando rentabilidad hasta en 20%.",
     type: "website",
     locale: "es_PE",
+    url: "https://www.selektafood.com",
+    siteName: "Selekta",
     images: [
       {
         url: "/assets/SELEKTA_fondo_blanco.png",
-        width: 1080,
-        height: 1080,
-        alt: "Selekta — Selección Automatizada",
+        width: 1200,
+        height: 630,
+        alt: "Selekta — Selección inteligente para la agroindustria",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "Selekta — Selección automatizada para la agroindustria",
+    card: "summary_large_image",
+    title: "Selekta — Selección inteligente para la agroindustria peruana",
     description:
-      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano.",
+      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma hasta en 20%.",
     images: ["/assets/SELEKTA_fondo_blanco.png"],
   },
 };

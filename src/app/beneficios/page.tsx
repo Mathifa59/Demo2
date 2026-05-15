@@ -4,9 +4,15 @@ import { Crops } from "@/components/Crops";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Beneficios — Selekta",
+  title: "Beneficios",
   description:
-    "Descubre cómo Selekta reduce mermas, aumenta eficiencia y se adapta a cada cultivo.",
+    "Hasta 20% más de rentabilidad, reducción significativa de mermas y estandarización de calidad. Descubre los beneficios reales de Selekta en tu planta.",
+  openGraph: {
+    title: "Beneficios | Selekta",
+    description:
+      "Hasta 20% más de rentabilidad, reducción significativa de mermas y estandarización de calidad. Descubre los beneficios reales de Selekta en tu planta.",
+    url: "https://www.selektafood.com/beneficios",
+  },
 };
 
 export default function BeneficiosPage() {
