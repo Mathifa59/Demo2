@@ -4,7 +4,7 @@ const LOGO_URL = "https://www.selektafood.com/assets/SELEKTA_fondo_blanco.png";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const DESTINATARIOS = ["tkuriyama@joisfood.com", "jdelgado@joisfood.com"];
+const DESTINATARIOS = ["tkuriyama@joisfood.com", "jdelgado@joisfood.com", "taofoodsperu@gmail.com"];
 
 // ── Rate limiting ──────────────────────────────────────────────
 const RATE_LIMIT_MAX = 3;
