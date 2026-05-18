@@ -23,7 +23,12 @@
       "Bash(python -c \"from PIL import ImageFont; f = ImageFont.load_default\\(\\); print\\('default font OK'\\)\")",
       "Bash(python -c ' *)",
       "Bash(mkdir -p /tmp/fonts)",
-      "Bash(cp \"C:\\\\Users\\\\MathiasVasquez\\\\AppData\\\\Local\\\\Temp\\\\email_mockup.png\" \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\public\\\\assets\\\\email_mockup.png\")"
+      "Bash(cp \"C:\\\\Users\\\\MathiasVasquez\\\\AppData\\\\Local\\\\Temp\\\\email_mockup.png\" \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\public\\\\assets\\\\email_mockup.png\")",
+      "Bash(copy \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\public\\\\assets\\\\logoselekta.png\" \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\src\\\\app\\\\icon.png\")",
+      "Bash(del \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\src\\\\app\\\\favicon.ico\")",
+      "Bash(cp \"/mnt/c/Users/MathiasVasquez/Desktop/SITIO WEB SELEKTA/public/assets/logoselekta.png\" \"/mnt/c/Users/MathiasVasquez/Desktop/SITIO WEB SELEKTA/src/app/icon.png\")",
+      "Bash(rm \"/mnt/c/Users/MathiasVasquez/Desktop/SITIO WEB SELEKTA/src/app/favicon.ico\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\public\\\\assets\\\\logoselekta.png\" \"C:\\\\Users\\\\MathiasVasquez\\\\Desktop\\\\SITIO WEB SELEKTA\\\\src\\\\app\\\\icon.png\" -Force)"
     ]
   }
 }
