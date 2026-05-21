@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { Logo } from "./Logo";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -27,7 +27,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none absolute -top-32 left-1/3 h-80 w-80 rounded-full bg-brand-500/15 blur-3xl"
       />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-3">
         <div className="lg:col-span-1">
           <Logo layout="footer" />
           <p className="mt-5 max-w-xs text-xs leading-relaxed text-neutral-300">
@@ -83,24 +83,6 @@ export function Footer() {
           </a>
         </div>
 
-        <div>
-          <h4 className="mb-4 text-sm font-semibold text-white">Ubícanos</h4>
-          <div className="relative h-32 w-full overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10">
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-80"
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, rgba(30,64,115,0.35), rgba(10,31,14,0.35)), url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80')",
-              }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative">
-                <span className="absolute -inset-4 animate-ping rounded-full bg-lime-brand/40" />
-                <MapPin className="relative h-8 w-8 text-lime-brand drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-5 text-center text-xs text-neutral-400">
