@@ -23,8 +23,7 @@ const posts = [
     title: "Desperdicio alimentario en Perú: el costo oculto que nadie calcula",
     excerpt:
       "Millones de toneladas de frutas y hortalizas se pierden cada año por errores en la selección. La tecnología de visión artificial puede revertir esta tendencia.",
-    img: "/assets/CAMARAS EN FAJA 001.jpg",
-    imgPosition: "center 65%",
+    img: "/assets/Foto para blog.jpg",
     date: "28 marzo 2026",
     readTime: "4 min",
     href: "#blog",
@@ -91,7 +90,6 @@ export function Blog() {
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ objectPosition: post.imgPosition ?? "center center" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent-900/50 to-transparent" />
                   <span
