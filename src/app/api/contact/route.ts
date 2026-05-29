@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
-const LOGO_URL = "https://www.selektafood.com/assets/SELEKTA_fondo_blanco.png";
+const LOGO_URL = "https://www.selektafood.com/assets/logoselekta sin fondo.png";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
