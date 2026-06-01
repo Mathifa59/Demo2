@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     template: "%s | Selekta",
   },
   description:
-    "Selekta automatiza la clasificación de frutas y hortalizas con visión artificial. Reduce mermas, mejora calidad y aumenta la rentabilidad de tu planta hasta en 20%.",
+    "Selekta automatiza la clasificación de frutas y hortalizas con tecnología de clasificación inteligente. Reduce mermas, mejora calidad y aumenta la rentabilidad de tu planta hasta en 20%.",
   keywords: [
     "selección de frutas",
     "clasificación automática",
-    "visión artificial agroindustria",
+    "clasificación inteligente agroindustria",
     "reducción de mermas",
     "selección de paltas",
     "selección de frijoles",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Selekta — Selección inteligente para la agroindustria",
     description:
-      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma y aumentando rentabilidad hasta en 20%.",
+      "Sistemas de selección automatizada que clasifican frutas con precisión superior al humano, reduciendo merma y aumentando rentabilidad hasta en 20%.",
     type: "website",
     locale: "es_PE",
     url: "https://www.selektafood.com",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Selekta — Selección inteligente para la agroindustria",
     description:
-      "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma hasta en 20%.",
+      "Automatización inteligente que clasifica frutas con precisión superior al humano, reduciendo merma hasta en 20%.",
     images: ["/assets/SELEKTA_fondo_blanco.png"],
   },
   verification: {

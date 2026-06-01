@@ -73,7 +73,7 @@ export function Hero() {
 
           <Reveal delay={220}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-              Nuestra tecnología de visión artificial clasifica frutas con
+              Nuestra tecnología de clasificación inteligente selecciona frutas con
               precisión superior al humano, reduciendo merma y aumentando la{" "}
               <strong className="font-semibold text-white">
                 rentabilidad hasta en 20%
