@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.selektafood.com"),
   title: {
-    default: "Selekta — Selección inteligente para la agroindustria peruana",
+    default: "Selekta — Selección inteligente para la agroindustria",
     template: "%s | Selekta",
   },
   description:
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     "reducción de mermas",
     "selección de paltas",
     "selección de frijoles",
-    "tecnología agroindustrial Perú",
+    "tecnología agroindustrial",
     "selekta",
     "selektafood",
-    "agroexportación Perú",
+    "agroexportación",
   ],
   authors: [{ name: "Selekta", url: "https://www.selektafood.com" }],
   creator: "Selekta",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     apple: "/assets/SELEKTA_fondo_blanco.png",
   },
   openGraph: {
-    title: "Selekta — Selección inteligente para la agroindustria peruana",
+    title: "Selekta — Selección inteligente para la agroindustria",
     description:
       "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma y aumentando rentabilidad hasta en 20%.",
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Selekta — Selección inteligente para la agroindustria peruana",
+    title: "Selekta — Selección inteligente para la agroindustria",
     description:
       "Tecnología de visión artificial que clasifica frutas con precisión superior al humano, reduciendo merma hasta en 20%.",
     images: ["/assets/SELEKTA_fondo_blanco.png"],
